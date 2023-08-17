@@ -11,7 +11,7 @@ function App() {
       <p className="title">Největší polštářová bitva v ČR</p>
       <div className="card">
         <h1>
-         24. 4. 2024
+         20. 4. 2024
         </h1>
       </div>
       <h3>
