@@ -5,11 +5,40 @@ import Head from "./organisms/Head.astro";
 <html lang="cs">
   <Head {...Astro.props} />
   <body>
-    <header></header>
+    <header class="px-4 pt-11 bg-orange-50">
+      <div class="max-w-7xl mx-auto flex justify-center items-center">
+        <div class="mt-10 lg:mt-0 lg:grow lg:basis-0">
+          <img
+            src="https://su.utb.cz/assets/SU_logo_sirka_04_RGB.bb46080c.png"
+            alt=""
+            class="h-10"
+          />
+        </div>
+        <div
+          class="text-center flex flex-auto overflow-x-auto whitespace-nowrap font-mono text-sm text-orange-600 basis-auto"
+        >
+          <div class="text-center w-full text-lg tracking-wide">
+            22.4.2024 - Zlín
+          </div>
+        </div>
+        <div
+          class="hidden sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end"
+        >
+          <a
+            href="#"
+            class="inline-flex justify-center rounded-2xl bg-orange-600 px-5 py-4 text-base font-semibold text-white hover:bg-orange-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 active:text-white/70 transition duration-300"
+            >Chci se zúčastnit</a
+          >
+        </div>
+      </div>
+    </header>
+
     <main>
       <slot />
     </main>
+
     <aside></aside>
+
     <footer></footer>
   </body>
 </html>
