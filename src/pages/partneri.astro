@@ -1,0 +1,70 @@
+---
+import Layout from "../components/Layout.astro";
+
+const metaTags = {
+  title: "Největší polštářová bitva v ČR",
+  description:
+    "Největší polštářová bitva v České Republice, pořádaná v roce 2024",
+  imageUrl: "TODO",
+};
+---
+
+<Layout {...metaTags}>
+  <section class="py-28 bg-orange-50 min-h-screen">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+      <div class="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
+        <h1
+          class="font-display text-5xl font-semibold tracking-wide sm:leading-snug text-orange-600 sm:text-7xl"
+        >
+          Největší polštářová bitva v ČR
+        </h1><div
+          class="mt-6 space-y-6 font-display text-2xl tracking-tight text-orange-900"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In
+            convallis. Sed elit dui, pellentesque a, faucibus vel, interdum nec,
+            diam. Aliquam ornare wisi eu metus. Cum sociis natoque penatibus et
+            magnis dis parturient montes, nascetur ridiculus mus.
+          </p><p>
+            Cum sociis natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Integer lacinia. Nulla non arcu lacinia
+            neque faucibus fringilla. Aliquam ornare wisi eu metus. Morbi
+            scelerisque luctus velit.
+          </p>
+        </div>
+        <dl
+          class="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left"
+        >
+          <div>
+            <dt class="font-mono text-sm text-orange-600">Polštářů</dt><dd
+              class="mt-0.5 text-2xl font-semibold tracking-tight text-orange-900"
+            >
+              18
+            </dd>
+          </div>
+          <div>
+            <dt class="font-mono text-sm text-orange-600">Účastníků</dt><dd
+              class="mt-0.5 text-2xl font-semibold tracking-tight text-orange-900"
+            >
+              2,091
+            </dd>
+          </div>
+          <div>
+            <dt class="font-mono text-sm text-orange-600">Lokace</dt><dd
+              class="mt-0.5 text-2xl font-semibold tracking-tight text-orange-900"
+            >
+              Lyžarský svah
+            </dd>
+          </div>
+          <div>
+            <dt class="font-mono text-sm text-orange-600">Město</dt><dd
+              class="mt-0.5 text-2xl font-semibold tracking-tight text-orange-900"
+            >
+              Zlín
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</Layout>
