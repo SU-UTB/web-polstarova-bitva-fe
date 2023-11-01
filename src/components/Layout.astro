@@ -1,11 +1,12 @@
 ---
 import Head from "./organisms/Head.astro";
+import { Header } from "./organisms/Header";
 ---
 
-<html lang="cs" class="bg-orange-50">
+<html lang="cs" class="bg-gray-100">
   <Head {...Astro.props} />
   <body>
-    <header></header>
+    <Header client:load/>
 
     <main>
       <slot />
@@ -13,7 +14,15 @@ import Head from "./organisms/Head.astro";
 
     <aside></aside>
 
-    <footer></footer>
+    <footer class="py-16 mt-28  bg-gray-800">
+      <div class="container mx-auto">
+        <h2 class="text-xl font-bold tracking-wide text-center text-gray-100">Největší polštářová bitva v ČR</h2>
+        <nav class="flex space-x-6 items-center justify-center text-gray-300 mt-6 tracking-wide">
+          <a class="px-2 py-1"  href="/kontakt">Kontakt</a>
+          <a class="px-2 py-1" href="/partneri">Partneři</a>
+        </nav>
+      </div>
+    </footer>
     <style>
       @font-face {
         font-family: "CabinetGrotesk";
