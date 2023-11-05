@@ -24,6 +24,6 @@
   "prettier.documentSelectors": ["**/*.astro"],
   "prettier.printWidth": 120,
   "[astro]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "astro-build.astro-vscode"
   }
 }

@@ -1,111 +1,124 @@
 ---
-import Layout from "../components/Layout.astro";
+import Layout from '../components/Layout.astro'
 
 const metaTags = {
-  title: "Největší polštářová bitva v ČR",
-  description:
-    "Největší polštářová bitva v České Republice, pořádaná v roce 2024"
-};
+	title: 'Největší polštářová bitva v ČR',
+	description: 'Největší polštářová bitva v České Republice, pořádaná v roce 2024'
+}
 ---
 
 <Layout {...metaTags}>
-  <section class="py-28 ">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
-      <div class="mx-auto max-w-2xl lg:max-w-6xl lg:px-12">
-        <h1
-          class="font-display text-5xl font-extrabold tracking-wide sm:leading-snug text-gray-900 sm:text-7xl"
-        >
-          Největší polštářová bitva v ČR
-        </h1><div
-          class="mt-12 space-y-8 font-display text-2xl tracking-tight text-gray-600"
-        >
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In
-            convallis. Sed elit dui, pellentesque a, faucibus vel, interdum nec,
-            diam. Aliquam ornare wisi eu metus. Cum sociis natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus.
-          </p><p>
-            Cum sociis natoque penatibus et magnis dis parturient montes,
-            nascetur ridiculus mus. Integer lacinia. Nulla non arcu lacinia
-            neque faucibus fringilla. Aliquam ornare wisi eu metus. Morbi
-            scelerisque luctus velit.
-          </p>
-        </div>
-        <dl
-          class="mt-16 grid grid-cols-4 text-center gap-4"
-        >
-          <div class="space-y-2">
-            <dt class="font-mono text-sm text-gray-500">Kdy?</dt><dd
-              class="mt-0.5 text-2xl font-semibold tracking-tight text-gray-900"
-            >
-              20. 4. 2024
-            </dd>
-          </div>
-          <div class="space-y-2">
-            <dt class="font-mono text-sm text-gray-500">V jakém městě?</dt><dd
-              class="mt-0.5 text-2xl font-semibold tracking-tight text-gray-900"
-            >
-              Zlín
-            </dd>
-          </div>
-          <div class="space-y-2">
-            <dt class="font-mono text-sm text-gray-500">A kde přesně?</dt><dd
-              class="mt-0.5 text-2xl font-semibold tracking-tight text-gray-900"
-            >
-              Ještě upřesníme
-            </dd>
-          </div>
-          <div class="space-y-2">
-            <dt class="font-mono text-sm text-gray-500">Jaký je ten rekord?</dt><dd
-              class="mt-0.5 text-2xl font-semibold tracking-tight text-gray-900"
-            >
-            780 lidí
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-  </section>
-  <section class="px-4 py-16">
-    <div class="max-w-7xl mx-auto">
-      <div class="bg-white rounded-xl px-16 py-20 grid grid-cols-2 shadow-sm">
-        <div class="pr-12">
-          <h2 class="text-4xl font-bold tracking-wider text-gray-900">Chceš být u toho ?</h2>
-          <p class="text-lg text-gray-700 leading-relaxed mt-10">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In convallis. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Aliquam ornare wisi eu metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-          </p>
-          <p class="text-lg text-gray-700 leading-relaxed mt-10">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In convallis. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Aliquam ornare wisi eu metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-          </p>
-          <p class="text-lg text-gray-700 leading-relaxed mt-10">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In convallis. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. 
-          </p>
-        </div>
-        <dir>
-          <img class="object-fit" src="https://img.freepik.com/premium-vector/isometric-illustration-gadget-shop-electronic-devices-shop_203633-2920.jpg" alt="">
-        </dir>
-      </div>
-    </div>
-  </section>
-  <section class="px-4 py-16">
-    <div class="max-w-7xl mx-auto">
-      <div class="bg-white rounded-xl px-16 py-20 grid grid-cols-2 shadow-sm">
-        <div class="pr-12">
-          <h2 class="text-4xl font-bold tracking-wider text-gray-900">Nemáš se jak dostat do Zlína ?</h2>
-          <p class="text-lg text-gray-700 leading-relaxed mt-10">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In convallis. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Aliquam ornare wisi eu metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-          </p>
-          <p class="text-lg text-gray-700 leading-relaxed mt-10">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In convallis. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Aliquam ornare wisi eu metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-          </p>
-          <p class="text-lg text-gray-700 leading-relaxed mt-10">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In convallis. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. 
-          </p>
-        </div>
-        <dir>
-          <img class="object-fit" src="https://img.freepik.com/free-vector/city-wireless-communication-isometric-concept-with-people-bus-stop_1284-15001.jpg?w=2000&t=st=1698852602~exp=1698853202~hmac=637eff8d15c36ea4c8cd9d3974dfada1dcb093dc177933173c46bd8221bdb26a" alt="">
-        </dir>
-      </div>
-    </div>
-  </section>
+	<section class="py-28">
+		<div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+			<div class="mx-auto max-w-2xl lg:max-w-6xl lg:px-12">
+				<h1
+					class="font-display text-5xl font-extrabold tracking-wide text-gray-900 sm:text-7xl sm:leading-snug"
+				>
+					Největší polštářová bitva v ČR
+				</h1><div class="font-display mt-12 space-y-8 text-2xl tracking-tight text-gray-600">
+					<p>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In convallis. Sed elit dui,
+						pellentesque a, faucibus vel, interdum nec, diam. Aliquam ornare wisi eu metus. Cum
+						sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					</p><p>
+						Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+						Integer lacinia. Nulla non arcu lacinia neque faucibus fringilla. Aliquam ornare wisi eu
+						metus. Morbi scelerisque luctus velit.
+					</p>
+				</div>
+				<dl class="mt-16 grid grid-cols-4 gap-4 text-center">
+					<div class="space-y-2">
+						<dt class="font-mono text-sm text-gray-500">Kdy?</dt><dd
+							class="mt-0.5 text-2xl font-semibold tracking-tight text-gray-900"
+						>
+							20. 4. 2024
+						</dd>
+					</div>
+					<div class="space-y-2">
+						<dt class="font-mono text-sm text-gray-500">V jakém městě?</dt><dd
+							class="mt-0.5 text-2xl font-semibold tracking-tight text-gray-900"
+						>
+							Zlín
+						</dd>
+					</div>
+					<div class="space-y-2">
+						<dt class="font-mono text-sm text-gray-500">A kde přesně?</dt><dd
+							class="mt-0.5 text-2xl font-semibold tracking-tight text-gray-900"
+						>
+							Ještě upřesníme
+						</dd>
+					</div>
+					<div class="space-y-2">
+						<dt class="font-mono text-sm text-gray-500">Jaký je ten rekord?</dt><dd
+							class="mt-0.5 text-2xl font-semibold tracking-tight text-gray-900"
+						>
+							780 lidí
+						</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+	</section>
+	<section class="px-4 py-16">
+		<div class="mx-auto max-w-7xl">
+			<div class="grid grid-cols-2 rounded-xl bg-white px-16 py-20 shadow-sm">
+				<div class="pr-12">
+					<h2 class="text-4xl font-bold tracking-wider text-gray-900">Chceš být u toho ?</h2>
+					<p class="mt-10 text-lg leading-relaxed text-gray-700">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In convallis. Sed elit dui,
+						pellentesque a, faucibus vel, interdum nec, diam. Aliquam ornare wisi eu metus. Cum
+						sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					</p>
+					<p class="mt-10 text-lg leading-relaxed text-gray-700">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In convallis. Sed elit dui,
+						pellentesque a, faucibus vel, interdum nec, diam. Aliquam ornare wisi eu metus. Cum
+						sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					</p>
+					<p class="mt-10 text-lg leading-relaxed text-gray-700">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In convallis. Sed elit dui,
+						pellentesque a, faucibus vel, interdum nec, diam.
+					</p>
+				</div>
+				<dir>
+					<img
+						class="object-fit"
+						src="https://img.freepik.com/premium-vector/isometric-illustration-gadget-shop-electronic-devices-shop_203633-2920.jpg"
+						alt=""
+					/>
+				</dir>
+			</div>
+		</div>
+	</section>
+	<section class="px-4 py-16">
+		<div class="mx-auto max-w-7xl">
+			<div class="grid grid-cols-2 rounded-xl bg-white px-16 py-20 shadow-sm">
+				<div class="pr-12">
+					<h2 class="text-4xl font-bold tracking-wider text-gray-900">
+						Nemáš se jak dostat do Zlína ?
+					</h2>
+					<p class="mt-10 text-lg leading-relaxed text-gray-700">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In convallis. Sed elit dui,
+						pellentesque a, faucibus vel, interdum nec, diam. Aliquam ornare wisi eu metus. Cum
+						sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					</p>
+					<p class="mt-10 text-lg leading-relaxed text-gray-700">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In convallis. Sed elit dui,
+						pellentesque a, faucibus vel, interdum nec, diam. Aliquam ornare wisi eu metus. Cum
+						sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					</p>
+					<p class="mt-10 text-lg leading-relaxed text-gray-700">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In convallis. Sed elit dui,
+						pellentesque a, faucibus vel, interdum nec, diam.
+					</p>
+				</div>
+				<dir>
+					<img
+						class="object-fit"
+						src="https://img.freepik.com/free-vector/city-wireless-communication-isometric-concept-with-people-bus-stop_1284-15001.jpg?w=2000&t=st=1698852602~exp=1698853202~hmac=637eff8d15c36ea4c8cd9d3974dfada1dcb093dc177933173c46bd8221bdb26a"
+						alt=""
+					/>
+				</dir>
+			</div>
+		</div>
+	</section>
 </Layout>

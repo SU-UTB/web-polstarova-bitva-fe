@@ -1,22 +1,167 @@
 ---
-import Layout from "../components/Layout.astro";
+import Layout from '../components/Layout.astro'
+
+import PartnerImage from '../images/partners.svg'
 
 const metaTags = {
-  title: "Největší polštářová bitva v ČR",
-  description:
-    "Největší polštářová bitva v České Republice, pořádaná v roce 2024"
-};
+	title: 'Největší polštářová bitva v ČR',
+	description: 'Největší polštářová bitva v České Republice, pořádaná v roce 2024'
+}
 ---
 
 <Layout {...metaTags}>
-  <section class="py-28 min-h-screen">
-    <div class="container mx-auto px-4">
-      <header class="text-center mb-12">
-        <h1 class="text-7xl font-extrabold tracking-wider">Partneři</h1>
-        <p class="mt-4 text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam commodo dui eget wisi. 
-        </p>
-      </header>
-    </div>
-  </section>
+	<section class="pb-28 pt-12 lg:pt-20">
+		<div class="mx-auto max-w-7xl px-5 md:px-20 lg:px-10">
+			<div class="grid gap-16 lg:grid-cols-2">
+				<div>
+					<hgroup class="mb-8 lg:mb-10">
+						<p
+							class="mb-8 w-fit rounded bg-black/10 px-4 py-1 text-xs font-bold uppercase tracking-widest text-gray-800 sm:text-sm lg:mb-10"
+						>
+							Partneři
+						</p>
+						<h1
+							class="text-3xl font-extrabold uppercase leading-tight tracking-wider sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight"
+						>
+							Staňte se partnerem a nechte si zahrát, po čem vaše srdce touží.
+						</h1>
+					</hgroup>
+					<p
+						class="mb-4 text-lg leading-relaxed tracking-wide text-gray-700 lg:text-xl lg:leading-relaxed"
+					>
+						Koncept a formu spolupráce můžeme upravit podle vašich požadavků do podoby individuální
+						nabídky. Pojďte do toho s námi, ať je letošní ročník nebesky skvělý! <br />
+					</p>
+					<p
+						class="mb-8 text-lg leading-relaxed tracking-wide text-gray-700 lg:mb-10 lg:text-xl lg:leading-relaxed"
+					>
+						Ozvěte se nám na
+						<a
+							href="mailto:skojec@sutb.cz"
+							class="font-semibold underline decoration-2 transition duration-300 hover:text-black"
+							>skojec@sutb.cz</a
+						>.
+					</p>
+
+					<a
+						href="/kontakt"
+						class="block w-fit rounded-md border border-transparent bg-gray-800 px-7 py-3 font-semibold tracking-widest text-gray-100 lg:px-9 lg:py-4 lg:text-xl"
+					>
+						Kontakt
+					</a>
+				</div>
+				<div class="hidden lg:block">
+					<img src={PartnerImage.src} alt="" />
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="py-28">
+		<div class="mx-auto max-w-md px-5 md:max-w-4xl md:px-20 lg:px-10 xl:max-w-7xl">
+			<h2
+				class="mb-8 text-center text-2xl font-bold uppercase leading-tight tracking-wider sm:text-3xl sm:leading-tight md:mb-10 md:text-4xl md:leading-tight"
+			>
+				Generální partner
+			</h2>
+			<a href="/" class="group mx-auto mb-24 block w-fit overflow-hidden">
+				<img
+					src="https://placehold.co/250x250"
+					alt=""
+					class="mx-auto transition duration-300 group-hover:scale-105"
+				/>
+			</a>
+			<h2
+				class="mb-8 mt-24 text-center text-xl font-semibold uppercase leading-tight tracking-wider sm:text-2xl sm:leading-tight md:mb-10 md:text-3xl md:leading-tight"
+			>
+				Logistický partner
+			</h2>
+			<a href="/" class="group mx-auto mb-24 block w-fit overflow-hidden">
+				<img
+					src="https://placehold.co/250x250"
+					alt=""
+					class="mx-auto transition duration-300 group-hover:scale-105"
+				/>
+			</a>
+			<h2
+				class="mb-8 mt-24 text-center text-lg font-semibold uppercase leading-tight tracking-wider sm:text-xl sm:leading-tight md:mb-10 md:text-2xl md:leading-tight"
+			>
+				Hlavní partneři
+			</h2>
+			<ul class="flex flex-wrap justify-center">
+				{
+					[...Array(12).keys()].map((_) => (
+						<li class="w-1/2 p-2 md:w-1/3 md:p-3 xl:w-1/4 xl:p-4">
+							<a href="/" class="group block w-full overflow-hidden">
+								<img
+									src="https://placehold.co/250x250"
+									alt=""
+									class="mx-auto w-full transition duration-300 group-hover:scale-105"
+								/>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+			<h2
+				class="mb-8 mt-24 text-center text-lg font-semibold uppercase leading-tight tracking-wider sm:text-xl sm:leading-tight md:mb-10 md:text-2xl md:leading-tight"
+			>
+				Partneři
+			</h2>
+			<ul class="flex flex-wrap justify-center">
+				{
+					[...Array(12).keys()].map((_) => (
+						<li class="w-1/2 p-2 md:w-1/3 md:p-3 xl:w-1/4 xl:p-4">
+							<a href="/" class="group block w-full overflow-hidden">
+								<img
+									src="https://placehold.co/250x250"
+									alt=""
+									class="mx-auto w-full transition duration-300 group-hover:scale-105"
+								/>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+			<h2
+				class="mb-8 mt-24 text-center text-lg font-semibold uppercase leading-tight tracking-wider sm:text-xl sm:leading-tight md:mb-10 md:text-2xl md:leading-tight"
+			>
+				Mediální Partneři
+			</h2>
+			<ul class="flex flex-wrap justify-center">
+				{
+					[...Array(4).keys()].map((_) => (
+						<li class="w-1/2 p-2 md:w-1/3 md:p-3 xl:w-1/4 xl:p-4">
+							<a href="/" class="group block w-full overflow-hidden">
+								<img
+									src="https://placehold.co/250x250"
+									alt=""
+									class="mx-auto w-full transition duration-300 group-hover:scale-105"
+								/>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+			<h2
+				class="mb-8 mt-24 text-center text-lg font-semibold uppercase leading-tight tracking-wider sm:text-xl sm:leading-tight md:mb-10 md:text-2xl md:leading-tight"
+			>
+				Organizátoři
+			</h2>
+			<ul class="flex flex-wrap justify-center">
+				{
+					[...Array(2).keys()].map((_) => (
+						<li class="w-1/2 p-2 md:w-1/3 md:p-3 xl:w-1/4 xl:p-4">
+							<a href="/" class="group block w-full overflow-hidden">
+								<img
+									src="https://placehold.co/250x250"
+									alt=""
+									class="mx-auto w-full transition duration-300 group-hover:scale-105"
+								/>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</section>
 </Layout>
