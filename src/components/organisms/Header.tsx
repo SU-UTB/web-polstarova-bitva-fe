@@ -10,17 +10,16 @@ export const Header = () => {
 				className="mx-auto flex w-full items-center justify-between px-5 py-4 lg:container md:px-10 md:py-8"
 			>
 				{({ open }) => {
-					if (typeof window !== 'undefined')
-						document?.body.classList.toggle('overflow-y-hidden', open)
+					if (typeof window !== 'undefined') document?.body.classList.toggle('overflow-y-hidden', open)
 
 					return (
 						<>
 							<a
 								href="/"
-								className="relative z-50 flex items-center gap-4 text-lg font-bold tracking-wide sm:text-xl"
+								className="relative z-50 flex items-center gap-4 font-bold tracking-wide sm:text-lg sm:text-xl"
 							>
 								<SuLogo className="h-8" />
-								<span>Studentská unie UTB</span>
+								<span>Největší polštářová bitva v ČR</span>
 							</a>
 							{/* Mobile menu button */}
 							<Menu.Button
@@ -48,11 +47,7 @@ export const Header = () => {
 													stroke="currentColor"
 													className="h-6 w-6"
 												>
-													<path
-														strokeLinecap="round"
-														strokeLinejoin="round"
-														d="M6 18L18 6M6 6l12 12"
-													/>
+													<path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
 												</svg>
 											</Transition>
 											<Transition
@@ -124,9 +119,25 @@ export const Header = () => {
 											<Menu.Item>
 												<a
 													href="/partneri"
-													className="rounded-lg bg-gray-800 px-8 py-3 text-gray-200"
+													className="rounded-lg border border-gray-800 px-8 py-3 text-gray-800"
 												>
-													Partneři
+													Pro partnery
+												</a>
+											</Menu.Item>
+										</Transition.Child>
+
+										<Transition.Child
+											enter={`transition duration-700 linear delay-[600ms]`}
+											enterFrom="opacity-0"
+											enterTo="opacity-100"
+											leave="transition duration-300 linear"
+											leaveFrom="opacity-100"
+											leaveTo="opacity-0"
+											as={React.Fragment}
+										>
+											<Menu.Item>
+												<a href="/ucastnici" className="rounded-lg bg-gray-800 px-8 py-3 text-gray-200">
+													Pro účastníky
 												</a>
 											</Menu.Item>
 										</Transition.Child>
