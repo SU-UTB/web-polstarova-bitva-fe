@@ -1,74 +1,74 @@
 ---
-import { fakerCS_CZ as faker } from '@faker-js/faker'
-import Layout from '../components/Layout.astro'
+import { fakerCS_CZ as faker } from '@faker-js/faker';
+import Layout from '../components/Layout.astro';
 
 const metaTags = {
-	title: 'Kontakt - Největší polštářová bitva v ČR ',
-	description: 'Největší polštářová bitva v České Republice, pořádaná v roce 2024'
-}
+  title: 'Kontakt - Největší polštářová bitva v ČR ',
+  description: 'Největší polštářová bitva v České Republice, pořádaná v roce 2024',
+};
 
 const people = new Array(9).fill({}).map(() => ({
-	name: faker.person.fullName(),
-	role: faker.name.jobTitle(),
-	bio: faker.lorem.paragraph(),
-	email: faker.internet.email()
-}))
+  name: faker.person.fullName(),
+  role: faker.name.jobTitle(),
+  bio: faker.lorem.paragraph(),
+  email: faker.internet.email(),
+}));
 ---
 
 <Layout {...metaTags}>
-	<section class="py-28">
-		<div class="container mx-auto px-4">
-			<header class="mb-12 text-center">
-				<h1 class="text-7xl font-extrabold tracking-wider">Kontakt</h1>
-				<p class="mx-auto mt-4 max-w-2xl text-xl leading-relaxed text-gray-600">
-					Rádi byste navázali spolupráci? Něco byste změnili? Máte dotaz? <br />
-					<strong class="font-medium text-gray-700">
-						Naši hvězdní manažeři jsou vám k dispozici, neváhejte se nám ozvat!
-					</strong>
-				</p>
-			</header>
-			<ul class="mx-auto grid max-w-sm gap-5 sm:max-w-3xl sm:grid-cols-2 xl:max-w-6xl xl:grid-cols-3">
-				{
-					people.map(person => (
-						<li class="flex flex-col items-center justify-center space-y-6 bg-white px-4 py-8 text-center shadow-sm xl:py-10">
-							<img
-								class=" h-36 w-36 rounded-full object-cover shadow-lg"
-								src="http://sutb.cz/assets/alena_skarupova.cf026ee2.jpg"
-								alt=""
-							/>
-							<div class="px-1">
-								<h3 class="text-xl font-extrabold uppercase tracking-wider text-gray-800">{person.name}</h3>
-								<p class="text-orange-600 ">{person.role}</p>
-							</div>
-							<ul role="list" class="w-full">
-								<li>
-									<a
-										href={person.email}
-										class="flex items-center justify-center space-x-2 font-semibold text-gray-700 underline decoration-2 underline-offset-4 transition duration-300 hover:text-orange-600"
-									>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											fill="none"
-											viewBox="0 0 24 24"
-											stroke-width="2"
-											stroke="currentColor"
-											class="-ml-1 h-5 w-5"
-										>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-											/>
-										</svg>
+  <section class="py-28">
+    <div class="container mx-auto px-4">
+      <header class="mb-12 text-center">
+        <h1 class="text-7xl font-extrabold tracking-wider">Kontakt</h1>
+        <p class="mx-auto mt-4 max-w-2xl text-xl leading-relaxed text-gray-600">
+          Rádi byste navázali spolupráci? Něco byste změnili? Máte dotaz? <br />
+          <strong class="font-medium text-gray-700">
+            Naši hvězdní manažeři jsou vám k dispozici, neváhejte se nám ozvat!
+          </strong>
+        </p>
+      </header>
+      <ul class="mx-auto grid max-w-sm gap-5 sm:max-w-3xl sm:grid-cols-2 xl:max-w-6xl xl:grid-cols-3">
+        {
+          people.map((person) => (
+            <li class="flex flex-col items-center justify-center space-y-6 bg-white px-4 py-8 text-center shadow-sm xl:py-10">
+              <img
+                class=" h-36 w-36 rounded-full object-cover shadow-lg"
+                src="http://sutb.cz/assets/alena_skarupova.cf026ee2.jpg"
+                alt=""
+              />
+              <div class="px-1">
+                <h3 class="text-xl font-extrabold uppercase tracking-wider text-gray-800">{person.name}</h3>
+                <p class="text-orange-600 ">{person.role}</p>
+              </div>
+              <ul role="list" class="w-full">
+                <li>
+                  <a
+                    href={person.email}
+                    class="flex items-center justify-center space-x-2 font-semibold text-gray-700 underline decoration-2 underline-offset-4 transition duration-300 hover:text-orange-600"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      class="-ml-1 h-5 w-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                      />
+                    </svg>
 
-										<span>{person.email}</span>
-									</a>
-								</li>
-							</ul>
-						</li>
-					))
-				}
-			</ul>
-		</div>
-	</section>
+                    <span>{person.email}</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
 </Layout>
