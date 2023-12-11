@@ -9,3 +9,7 @@ RewriteRule ^(.\_)$ https://%1/$1 [R=301,L]
 
 RewriteCond %{HTTPS} !=on [NC]
 RewriteRule ^(.\*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# 404 page
+
+ErrorDocument 404 /404.html
