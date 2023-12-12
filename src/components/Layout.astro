@@ -1,44 +1,24 @@
 ---
+interface Props {
+  title: string;
+  description: string;
+  imageUrl?: string;
+}
+
+import '@fontsource-variable/inter';
+import Footer from './organisms/Footer.astro';
 import Head from './organisms/Head.astro';
 import { Header } from './organisms/Header';
 ---
 
-<html lang="cs" class="bg-gray-900">
+<html lang="cs" class="">
   <Head {...Astro.props} />
   <body>
     <Header client:load />
-
     <main>
       <slot />
     </main>
-
     <aside></aside>
-
-    <footer class="bg-gray-900 py-16">
-      <div class="container mx-auto">
-        <h2 class="text-center text-xl font-bold tracking-wide text-gray-100">Největší polštářová bitva v ČR</h2>
-        <nav class="mt-6 flex items-center justify-center space-x-6 tracking-wide text-gray-300">
-          <a class="px-2 py-1" href="/kontakt">Kontakt</a>
-          <a class="px-2 py-1" href="/partneri">Partneři</a>
-        </nav>
-      </div>
-    </footer>
-    <style>
-      @font-face {
-        font-family: 'CabinetGrotesk';
-        src:
-          url('/fonts/CabinetGrotesk-Variable.woff2') format('woff2'),
-          url('/fonts/CabinetGrotesk-Variable.woff') format('woff'),
-          url('/fonts/CabinetGrotesk-Variable.ttf') format('truetype');
-        font-weight: 100 900;
-        font-display: swap;
-        font-style: normal;
-      }
-
-      html,
-      body {
-        font-family: 'CabinetGrotesk', sans-serif;
-      }
-    </style>
+    <Footer />
   </body>
 </html>
