@@ -5,20 +5,18 @@ interface Props {
   imageUrl?: string;
 }
 
-import '@fontsource-variable/inter';
-import Footer from './organisms/Footer.astro';
+import '@fontsource-variable/open-sans';
 import Head from './organisms/Head.astro';
-import { Header } from './organisms/Header';
 ---
 
 <html lang="cs" class="">
   <Head {...Astro.props} />
-  <body>
-    <Header client:load />
+  <body class="bg-pink-50">
+    <!-- <Header client:load /> -->
     <main>
       <slot />
     </main>
     <aside></aside>
-    <Footer />
+    <!-- <Footer /> -->
   </body>
 </html>

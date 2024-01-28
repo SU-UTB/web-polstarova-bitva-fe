@@ -1,6 +1,5 @@
 ---
 import Layout from '../components/Layout.astro';
-import Container from '../components/atoms/Container.astro';
 
 const metaTags = {
   title: 'Největší polštářová bitva v ČR',
@@ -8,65 +7,46 @@ const metaTags = {
     'Připravte se na nekonečnou porci zábavy, vzrušení a adrenalinu, protože se chystáme zaznamenat nový rekord v počtu polštářových bojovníků na jednom místě. Tato událost je otevřena všem, bez ohledu na věk, pohlaví nebo zkušenosti.',
   image: '/meta-image.jpg',
 };
+
+const infoItems = [
+  { title: 'Kdy?', value: '20. 4. 2024' },
+  { title: 'V jakém městě?', value: 'Zlín' },
+  { title: 'A kde přesně?', value: 'Ještě upřesníme' },
+  { title: 'Jaký je ten rekord?', value: '780 lidí' },
+];
 ---
 
 <Layout {...metaTags}>
-  <section class="md:pt-16 lg:pt-24 xl:pt-32 pb-16 lg:pb-32">
-    <Container>
-      <div class="flex justify-center items-center">
-        <div class="">
-          <h1
-            class="text-4xl font-bold leading-snug tracking-wide sm:text-5xl sm:leading-snug md:text-6xl md:leading-snug lg:text-7xl lg:leading-snug"
-          >
-            Největší polštářová bitva v ČR
-          </h1>
-          <div
-            class="mt-8 space-y-4 text-lg tracking-tight sm:text-xl md:space-y-8 sm:leading-relaxed leading-relaxed max-w-5xl"
-          >
-            <p>
-              Připravte se na nekonečnou porci zábavy, vzrušení a adrenalinu, protože se chystáme zaznamenat nový rekord
-              v počtu polštářových bojovníků na jednom místě. Tato událost je otevřena všem, bez ohledu na věk, pohlaví
-              nebo zkušenosti. Stačí mít srdce plné odvahy a chuť se zapojit do té nejepičtější bitvy na polštáře,
-              kterou Česká republika kdy viděla.
-            </p><p>
-              Co můžete očekávat? Odpověd je jednoduchá: neuvěřitelnou zábavu, neskutečný smích a nezapomenutelné chvíle
-              strávené s přáteli, rodinou nebo dokonce novými známými. A to vše za účelem dosáhnout vítězství a stát se
-              legendou Polštářové Bitvy.
-            </p>
-            <p>
-              Datum události se blíží, takže neváhejte a zarezervujte si své místo na seznamu bojovníků. Těšíme se na
-              setkání s vámi na bojišti Největší Polštářové Bitvy v České republice!
-            </p>
-          </div>
-          <dl class="mt-16 grid gap-12 text-center sm:grid-cols-2 md:gap-8 lg:grid-cols-4 lg:gap-4">
-            <div class="space-y-2">
-              <dt class="font-mono text-sm">Kdy?</dt><dd class="mt-0.5 text-2xl font-semibold tracking-tight">
-                20. 4. 2024
-              </dd>
-            </div>
-            <div class="space-y-2">
-              <dt class="font-mono text-sm">V jakém městě?</dt><dd class="mt-0.5 text-2xl font-semibold tracking-tight">
-                Zlín
-              </dd>
-            </div>
-            <div class="space-y-2">
-              <dt class="font-mono text-sm">A kde přesně?</dt><dd class="mt-0.5 text-2xl font-semibold tracking-tight">
-                Ještě upřesníme
-              </dd>
-            </div>
-            <div class="space-y-2">
-              <dt class="font-mono text-sm">Jaký je ten rekord?</dt><dd
-                class="mt-0.5 text-2xl font-semibold tracking-tight"
-              >
-                780 lidí
-              </dd>
-            </div>
-          </dl>
-        </div>
+  <section class="relative">
+    <div class="absolute grid grid-cols-2 h-full inset-0">
+      <div class="bg-primary-500"></div>
+    </div>
+    <div class="max-w-6xl mx-auto grid grid-cols-2 relative">
+      <div class="py-36 pr-36">
+        <h1 class="text-7xl font-semibold text-white leading-snug tracking-wide">Největší polštářová bitva v ČR</h1>
       </div>
-    </Container>
+      <div class="py-36 pl-36 space-y-8">
+        <p class="text-xl leading-relaxed">
+          Připravte se na nekonečnou porci zábavy, vzrušení a adrenalinu, protože se chystáme zaznamenat nový rekord v
+          počtu polštářových bojovníků na jednom místě.
+        </p>
+        <p class="text-xl leading-relaxed">
+          Tato událost je otevřena všem, bez ohledu na věk, pohlaví nebo zkušenosti. Stačí mít srdce plné odvahy a chuť
+          se zapojit do té nejepičtější bitvy na polštáře, kterou Česká republika kdy viděla.
+        </p>
+      </div>
+    </div>
   </section>
-  <section class="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32">
-    <Container />
+  <section class="bg-[#1E1E1E] py-28 text-gray-50">
+    <dl class="max-w-7xl mx-auto grid gap-12 text-center sm:grid-cols-2 md:gap-8 lg:grid-cols-4 lg:gap-4">
+      {
+        infoItems.map((item) => (
+          <div class="space-y-2">
+            <dt class="text-xl">{item.title}</dt>
+            <dd class="mt-0.5 text-3xl font-bold tracking-tight">{item.value}</dd>
+          </div>
+        ))
+      }
+    </dl>
   </section>
 </Layout>
