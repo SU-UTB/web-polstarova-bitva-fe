@@ -1,5 +1,7 @@
 ---
 import Layout from '../components/Layout.astro';
+import Bytkar1 from '../components/atoms/Characters/Bytkar1.astro';
+import NapisImage from '../images/home/hero.png';
 
 const metaTags = {
   title: 'Největší polštářová bitva v ČR',
@@ -17,36 +19,135 @@ const infoItems = [
 ---
 
 <Layout {...metaTags}>
-  <section class="relative">
-    <div class="absolute grid grid-cols-2 h-full inset-0">
-      <div class="bg-primary-500"></div>
+  <section class="relative py-40 min-h-[calc(100vh-92px)]">
+    <div class="container mx-auto px-4 flex justify-center h-full items-center">
+      <h1>
+        <img src={NapisImage.src} alt="" />
+        <span class="sr-only">Největší polštářová bytva</span>
+      </h1>
     </div>
-    <div class="max-w-6xl mx-auto grid grid-cols-2 relative">
-      <div class="py-36 pr-36">
-        <h1 class="text-7xl font-semibold text-white leading-snug tracking-wide">Největší polštářová bitva v ČR</h1>
-      </div>
-      <div class="py-36 pl-36 space-y-8">
-        <p class="text-xl leading-relaxed">
-          Připravte se na nekonečnou porci zábavy, vzrušení a adrenalinu, protože se chystáme zaznamenat nový rekord v
-          počtu polštářových bojovníků na jednom místě.
-        </p>
-        <p class="text-xl leading-relaxed">
-          Tato událost je otevřena všem, bez ohledu na věk, pohlaví nebo zkušenosti. Stačí mít srdce plné odvahy a chuť
-          se zapojit do té nejepičtější bitvy na polštáře, kterou Česká republika kdy viděla.
-        </p>
+  </section>
+  <section class="py-24 bg-slate-900 shadow-xl shadow-slate-900/20">
+    <div class="lg:max-w-screen-2xl mx-auto px-4">
+      <dl class="grid grid-cols-4 gap-14">
+        {
+          infoItems.map((item) => (
+            <div class="flex items-center flex-col justify-center text-center gap-3 border-2 bg-slate-800 border-pink-500 rounded-2xl shadow-xl shadow-pink-500/20  py-10 px-4">
+              <dt class="text-lg font-medium text-slate-300">{item.title}</dt>
+              <dd class="text-3xl font-bold tracking-wide text-pink-600">{item.value}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </section>
+  <section class="py-24">
+    <div class="lg:max-w-screen-xl mx-auto px-4">
+      <div class="grid grid-cols-2">
+        <div>
+          <h2 class="text-4xl font-bold tracking-wide text-slate-900 mb-8">Co chystáme?</h2>
+          <p class="text-slate-700 leading-[1.9] text-lg mb-6">
+            Připravte se na nekonečnou porci zábavy, vzrušení a adrenalinu, protože se chystáme zaznamenat nový rekord v
+            počtu polštářových bojovníků na jednom místě.
+          </p>
+          <p class="text-slate-700 leading-[1.9] text-lg">
+            Tato událost je otevřena všem, bez ohledu na věk, pohlaví nebo zkušenosti. Stačí mít srdce plné odvahy a
+            chuť se zapojit do té nejepičtější bitvy na polštáře, kterou Česká republika kdy viděla.
+          </p>
+        </div>
+        <div class="flex justify-end">
+          <Bytkar1 class="h-96" />
+        </div>
       </div>
     </div>
   </section>
-  <section class="bg-[#1E1E1E] py-28 text-gray-50">
-    <dl class="max-w-7xl mx-auto grid gap-12 text-center sm:grid-cols-2 md:gap-8 lg:grid-cols-4 lg:gap-4">
-      {
-        infoItems.map((item) => (
-          <div class="space-y-2">
-            <dt class="text-xl">{item.title}</dt>
-            <dd class="mt-0.5 text-3xl font-bold tracking-tight">{item.value}</dd>
+  <section class="py-24">
+    <div class="lg:max-w-screen-xl mx-auto px-4">
+      <div class="grid grid-cols-2">
+        <div class="order-2">
+          <h2 class="text-4xl font-bold tracking-wide text-slate-900 mb-8">Co můžete očekávat?</h2>
+          <p class="text-slate-700 leading-[1.9] text-lg mb-6">
+            Odpověd je jednoduchá: neuvěřitelnou zábavu, neskutečný smích a nezapomenutelné chvíle strávené s přáteli,
+            rodinou nebo dokonce novými známými. A to vše za účelem dosáhnout vítězství a stát se legendou Polštářové
+            Bitvy.
+          </p>
+          <p class="text-slate-700 leading-[1.9] text-lg mb-8">
+            Datum události se blíží, takže neváhejte a zarezervujte si své místo na seznamu bojovníků. Těšíme se na
+            setkání s vámi na bojišti Největší Polštářové Bitvy v České republice!
+          </p>
+          <div class="flex gap-4">
+            <a
+              class="text-lg font-semibold text-pink-600 border-2 border-transparent transition duration-300 hover:text-pink-700 flex gap-3 items-center group"
+              href="/ucastnici"
+            >
+              <span>Více informací</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="w-6 h-6 group-hover:translate-x-2 transition duration-300"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+            </a>
           </div>
-        ))
-      }
-    </dl>
+        </div>
+        <div class="order-1 flex justify-start">
+          <Bytkar1 class="h-96" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-24">
+    <div class="lg:max-w-screen-xl mx-auto px-4">
+      <div class="grid grid-cols-2">
+        <div class="order-1">
+          <h2 class="text-4xl font-bold tracking-wide text-slate-900 mb-8 leading-snug">
+            Chceš aby se lidé bili ve tvém jméně ?
+          </h2>
+          <p class="text-slate-700 leading-[1.9] text-lg mb-6">
+            Rozhodni o tom, čí peří bude prolito v nelítostném boji polštářovém. Přidej se k nám jako partner a rozhodni
+            o osudu plebsu jež bude prolévat své peří pro tvé potěšení!
+          </p>
+          <p class="text-slate-700 leading-[1.9] text-lg mb-8">
+            Koncept a formu spolupráce můžeme upravit podle vašich požadavků do podoby individuální nabídky. Pojďte do
+            toho s námi, ať je letošní ročník nebesky skvělý!
+          </p>
+          <div class="flex gap-4">
+            <a
+              class="text-lg font-semibold bg-pink-600 border-2 border-transparent text-pink-50 px-7 tracking-wide py-3 rounded-lg block shadow-lg shadow-pink-600/20 hover:bg-pink-500 hover:text-white hover:shadow-xl hover:shadow-pink-500/30 transition duration-300"
+              href="/kontakt">Kontaktujte nás</a
+            >
+            <a
+              class="text-lg font-semibold text-pink-600 border-2 border-transparent hover:bg-pink-500 hover:text-white px-7 tracking-wide py-3 rounded-lg block transition duration-300 hover:shadow-lg hover:shadow-pink-500/20"
+              href="/partneri">Více informací</a
+            >
+          </div>
+        </div>
+        <div class="order-2 flex justify-end">
+          <Bytkar1 class="h-96" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-24 bg-slate-900 shadow-xl shadow-slate-900/20">
+    <div class="lg:max-w-screen-2xl mx-auto px-4">
+      <h2 class="text-4xl text-center font-bold tracking-wide text-pink-500 mb-8 leading-snug">
+        Video z minulého ročníku
+      </h2>
+      <div
+        class="rounded-xl border-2 border-pink-500 overflow-hidden shadow-xl shadow-pink-600/30 max-w-4xl aspect-[5/3] mx-auto"
+      >
+        <iframe
+          class="w-full h-full"
+          src="https://www.youtube.com/embed/5mqx7q2_YfA?si=tzGPYJTLT9t5hv07"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </div>
   </section>
 </Layout>

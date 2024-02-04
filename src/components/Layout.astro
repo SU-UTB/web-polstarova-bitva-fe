@@ -7,12 +7,13 @@ interface Props {
 
 import '@fontsource-variable/open-sans';
 import Head from './organisms/Head.astro';
+import { Header } from './organisms/Header';
 ---
 
 <html lang="cs" class="">
   <Head {...Astro.props} />
-  <body class="bg-pink-50">
-    <!-- <Header client:load /> -->
+  <body class="bg-slate-100">
+    <Header client:load />
     <main>
       <slot />
     </main>

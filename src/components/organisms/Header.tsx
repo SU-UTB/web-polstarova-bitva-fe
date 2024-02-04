@@ -18,16 +18,18 @@ export const Header = () => {
     <header className="py-5 sm:py-6 md:py-8 ">
       <nav className="lg:max-w-screen-xl px-4 mx-auto flex justify-between items-center">
         <a href="/" className="flex gap-4 uppercase font-bold items-center relative z-10">
-          <span>Největší polštářová bitva v ČR</span>
+          <span>SuRekordista</span>
         </a>
-        <div className="hidden md:flex items-center gap-8 font-medium text-slate-700 text-lg tracking-wide">
-          <a className="px-2 py-1 -my-1" href="/o-nas">
-            O nás
+        <div className="hidden md:flex items-center gap-8 font-medium text-slate-700 text-lg">
+          <a className="px-2 py-1 -my-1" href="/ucastnici">
+            Pro účastníky
           </a>
-          <a className="px-2 py-1 -my-1" href="/pridej-se-k-nam">
-            Přidej se k nám
+          <a className="px-2 py-1 -my-1" href="/partneri">
+            Pro partnery
           </a>
-          <Button type="link" href="/kontakt" variant="primary" size="sm" text="Kontakt" />
+          <a className="px-2 py-1 -my-1" href="/kontakt">
+            Kontakt
+          </a>
         </div>
         <Menu>
           {({ open, close }) => {
