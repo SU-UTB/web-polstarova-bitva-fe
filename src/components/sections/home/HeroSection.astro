@@ -1,0 +1,40 @@
+---
+import image from '../../../images/home/hero.png';
+import Bytkar1 from '../../atoms/Characters/Bytkar1.astro';
+import Bytkar2 from '../../atoms/Characters/Bytkar2.astro';
+---
+
+<section
+  class="h-[calc(100vh-72px)] lg:h-[calc(100vh-136px)] lg:max-w-6xl px-4 md:px-6 lg:px-8 mx-auto flex flex-col items-center justify-between py-8"
+>
+  <h1 class="hidden lg:flex flex-grow items-center justify-center pb-16">
+    <img class="w-full" src={image.src} />
+    <span class="sr-only">Největší polštářová bytva</span>
+  </h1>
+  <div class="flex-grow flex lg:hidden flex-col items-center justify-center gap-16 max-w-md md:max-w-xl">
+    <h1 class="">
+      <img class="" src={image.src} />
+      <span class="sr-only">Největší polštářová bytva</span>
+    </h1>
+    <div class="flex w-full gap-8">
+      <Bytkar2 />
+      <Bytkar1 class="[transform:rotateY(180deg)]" />
+    </div>
+  </div>
+  <a
+    href="/#info"
+    title="Více informací"
+    class="mx-auto relative block animate-[bounce_1000ms_infinite_3s] w-fit rounded-full p-3 bg-primary-600 text-primary-100 transition duration-300 hover:text-white shadow-lg shadow-primary-600/20 hover:shadow-xl hover:shadow-primary-600/30"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      class="w-8 h-8 relative"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"></path>
+    </svg>
+  </a>
+</section>

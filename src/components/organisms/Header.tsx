@@ -39,7 +39,7 @@ export const Header = () => {
 
             return (
               <>
-                <Menu.Button className="p-2 h-[40px] w-[40px] -my-2 fixed flex z-30 right-4 top-6 sm:top-7 sm:right-6 bg-primary-600 rounded-lg shadow-primary-600/30 shadow-lg text-white md:hidden">
+                <Menu.Button className="p-2 h-[40px] w-[40px] -my-2 fixed flex z-30 right-4 top-6 sm:top-7 sm:right-6 bg-primary-600 rounded-lg shadow-primary-600/20 shadow text-white md:hidden">
                   <Transition
                     show={!open}
                     as="span"
