@@ -1,8 +1,9 @@
 import { Menu, Transition } from '@headlessui/react';
 import React, { useEffect } from 'react';
+import polstare from '../../images/logo_rekordy_png.png';
 import { Button } from '../atoms/Button';
 import { Icon } from '../atoms/Icon';
-import { SuLogo } from '../atoms/SuLogo';
+
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -15,19 +16,20 @@ export const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="py-5 sm:py-6 md:py-8 ">
-      <nav className="lg:max-w-screen-xl px-4 mx-auto flex justify-between items-center">
-        <a href="/" className="flex gap-4 uppercase font-bold items-center relative z-10 font-heading">
-          <span>SuRekordista</span>
+    <header className="py-5 sm:py-6 md:py-8 lg:py-10">
+      <nav className="lg:max-w-6xl px-4 md:px-6 lg:px-8 mx-auto flex justify-between items-center">
+        <a href="/" className="flex gap-3 uppercase font-bold items-center relative z-10 font-heading">
+          <img src={polstare.src} className="h-14 md:h-16 lg:h-20 -my-2.5 sm:-my-3 md:-my4" alt="" />
+          <span className="sr-only">SuRekordista</span>
         </a>
-        <div className="hidden md:flex items-center gap-8 font-medium text-slate-700 text-lg">
-          <a className="px-2 py-1 -my-1" href="/ucastnici">
-            Pro účastníky
+        <div className="hidden md:flex items-center gap-8 font-medium text-slate-700 text-lg lg:text-xl">
+          <a className="px-2 py-1" href="/ucastnici">
+            Pro bytkaře
           </a>
-          <a className="px-2 py-1 -my-1" href="/partneri">
+          <a className="px-2 py-1" href="/partneri">
             Pro partnery
           </a>
-          <a className="px-2 py-1 -my-1" href="/kontakt">
+          <a className="px-2 py-1" href="/kontakt">
             Kontakt
           </a>
         </div>
@@ -78,7 +80,7 @@ export const Header = () => {
                       leaveFrom="opacity-100"
                       leaveTo="opacity-0"
                     >
-                      <div className="bg-black/80  flex-grow absolute inset-0 w-full h-full"></div>
+                      <div className="bg-dark/80  flex-grow absolute inset-0 w-full h-full"></div>
                     </Transition.Child>
                     <Transition.Child
                       as={React.Fragment}
@@ -90,8 +92,8 @@ export const Header = () => {
                       leaveTo="opacity-0"
                     >
                       <div className="absolute flex gap-4 pt-5 pl-4 sm:pt-6 sm:pl-5 uppercase font-bold tracking-wider items-center text-stone-50 z-20">
-                        <SuLogo className="h-8" />
-                        <span>Studentská unie UTB</span>
+                        <img src={polstare.src} className="h-14 -my-2.5 sm:-my-3 md:-my4" alt="" />
+                        <span className="sr-only">SuRekordista</span>
                       </div>
                     </Transition.Child>
                     <Transition.Child
@@ -103,14 +105,14 @@ export const Header = () => {
                       leaveFrom="opacity-100"
                       leaveTo="translate-x-full"
                     >
-                      <div className="bg-stone-900 w-full h-full pb-5 pt-[calc(52px+1.25rem)] sm:py-6 px-4 sm:px-6 text-stone-100 relative z-10">
+                      <div className="bg-dark w-full h-full pb-5 pt-[calc(52px+1.25rem)] sm:py-6 px-4 sm:px-6 text-stone-100 relative z-10">
                         <div className="flex flex-col h-full space-y-8 items-center justify-center">
                           <Menu.Item>
                             <a
                               className="ui-active:text-primary-600 block w-full py-2 text-lg font-medium text-center duration-300"
                               href="/o-nas"
                             >
-                              O nás
+                              Pro bytkaře
                             </a>
                           </Menu.Item>
                           <Menu.Item>
@@ -118,7 +120,7 @@ export const Header = () => {
                               className="ui-active:text-primary-600 block w-full py-2 text-lg font-medium text-center transition duration-300"
                               href="/pridej-se-k-nam"
                             >
-                              Přidej se k nám
+                              Pro partnery
                             </a>
                           </Menu.Item>
                           <Menu.Item>

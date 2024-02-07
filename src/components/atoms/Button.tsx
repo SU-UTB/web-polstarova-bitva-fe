@@ -7,12 +7,12 @@ type Props = { text: string; size: 'sm' | 'md' | 'lg'; variant: 'primary' | 'gra
 
 export const Button = (props: Props) => {
   const className = classNames(
-    'font-medium tracking-wide rounded transition duration-300',
+    'font-medium tracking-wide rounded-xl transition duration-300',
     props.size === 'sm' && 'py-3 px-6 text-base',
     props.size === 'md' && 'py-4 px-8 text-lg',
     props.size === 'lg' && 'py-4 sm:py-5 px-8 sm:px-9 text-lg sm:text-xl',
     props.variant === 'primary' &&
-      'bg-black text-gray-50 shadow shadow-black/20 hover:bg-gray-900 hover:shadow-gray-900/30 hover:text-white',
+      'bg-primary-600 text-gray-50 shadow shadow-primary-600/20 hover:bg-primary-700 hover:shadow-primary-600/40 hover:text-white',
     props.variant === 'gray' &&
       'bg-stone-200 shadow-sm shadow-stone-300/20 text-stone-700 hover:bg-stone-300 hover:text-stone-900 hover:shadow',
     props.variant === 'white' &&
