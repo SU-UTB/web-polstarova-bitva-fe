@@ -17,7 +17,7 @@ export const Header = () => {
   return (
     <header className="py-5 sm:py-6 md:py-8 ">
       <nav className="lg:max-w-screen-xl px-4 mx-auto flex justify-between items-center">
-        <a href="/" className="flex gap-4 uppercase font-bold items-center relative z-10">
+        <a href="/" className="flex gap-4 uppercase font-bold items-center relative z-10 font-heading">
           <span>SuRekordista</span>
         </a>
         <div className="hidden md:flex items-center gap-8 font-medium text-slate-700 text-lg">
