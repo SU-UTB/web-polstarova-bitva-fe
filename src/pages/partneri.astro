@@ -1,79 +1,36 @@
 ---
 import Layout from '../components/Layout.astro';
-import Bytkar2 from '../components/atoms/Characters/Bytkar2.astro';
+import { Container } from '../components/atoms/Container';
+import IntroSection from '../components/sections/partners/IntroSection.astro';
 import { PricingSection } from '../components/sections/partners/PricingSection';
 
 const metaTags = {
   title: 'Největší polštářová bitva v ČR',
   description: 'Největší polštářová bitva v České Republice, pořádaná v roce 2024',
 };
-
-const tableItems = [
-  { title: 'Logo na webu', small: true, medium: true, large: true },
-  { title: 'Potištěný polštář', small: true, medium: true, large: true },
-  { title: 'Vyhlášení při rekordu moderátorem', small: true, medium: true, large: true },
-  { title: 'Logo v aftermovie', small: true, medium: true, large: true },
-  { title: 'Rollup', small: true, medium: true, large: true },
-  { title: 'Loga na tiskovinách', small: false, medium: true, large: true },
-  { title: 'Vlastní příspěvek', small: false, medium: true, large: true },
-  { title: 'Vlastní zóna/stánek', small: false, medium: true, large: true },
-  { title: 'Reels video', small: false, medium: true, large: true },
-  { title: 'Logo na promítacím plátně v průběhu akce', small: false, medium: true, large: true },
-  { title: 'Loga na bannery v arealu', small: false, medium: true, large: true },
-  { title: 'Zapojení do programu', small: false, medium: false, large: true },
-  { title: 'Pojmenování stage/kamionu', small: false, medium: false, large: true },
-  { title: 'Vlastní bitva (teambuilding pro firmu)', small: false, medium: false, large: true },
-  { title: 'Vlastní chill zóna', small: false, medium: false, large: true },
-  { title: 'Zapojení firmy v doprovodném programu', small: false, medium: false, large: true },
-  { title: 'Exkluzivní reklama na webu', small: false, medium: false, large: true },
-  { title: 'Fotosoutěž', small: false, medium: false, large: true },
-];
 ---
 
 <Layout {...metaTags}>
-  <section class="py-16 md:py-24 lg:py-32">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-        <div class="md:col-span-2 space-y-6">
-          <hgroup class="space-y-4 md:space-y-6 lg:space-y-8">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-950">
-              Staňte se naším partnerem
-            </h1>
-            <p class="text-primary-600 font-semibold tracking-wide text-lg md:text-xl lg:text-2xl lg:max-w-2xl">
-              Vráťte se společně s námi do dětství a překonejme národní rekord!
-            </p>
-          </hgroup>
-          <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900 mb-4 lg:mb-6">
-            Rádi přizpůsobíme koncept a formu spolupráce vašim potřebám prostřednictvím individuální nabídky. Jsme
-            flexibilní a ochotní reagovat na vaše požadavky, abychom vytvořili vzájemně prospěšné partnerství. Připojte
-            se k nám a společně překonáme rekord!
-          </p>
-        </div>
-        <div class="flex justify-center">
-          <Bytkar2 class="h-48 md:h-72 xl:h-96" />
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <IntroSection />
   <PricingSection client:load />
-
-  <section class="py-16 md:py-24 lg:py-32">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-      <h2 class="text-4xl font-bold text-gray-950 mb-6">Co je to polštářová bitva?</h2>
+  <section class="pb-16 md:pb-24 lg:pb-32">
+    <Container>
+      <h2 class="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 lg:mb-8 leading-snug text-gray-950">
+        Co je to polštářová bitva?
+      </h2>
       <div class="max-w-4xl">
-        <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900 mb-4 lg:mb-6">
+        <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900 font-medium mb-4 lg:mb-6">
           Polštářová Bytva je projekt, který pořádá nezisková organizace Studentská unie UTB, působící pod Univerzitou
           Tomáše Bati ve Zlíně.
         </p>
-        <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900 mb-4 lg:mb-6">
+        <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900 font-medium mb-4 lg:mb-6">
           V rámci našeho projektu se budeme snažit překonat národní rekord v největší polštářové bitvě, ale také o
           vytvoření nezapomenutelných zážitků a posílení pout mezi všemi účastníky.
         </p>
-        <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900">
+        <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900 font-medium">
           Přidejte se k nám, vezměte polštáře a buďte součástí této jedinečné události!
         </p>
       </div>
-    </div>
+    </Container>
   </section>
 </Layout>

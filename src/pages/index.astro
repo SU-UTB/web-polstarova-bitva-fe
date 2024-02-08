@@ -3,6 +3,7 @@ import Layout from '../components/Layout.astro';
 import { Button } from '../components/atoms/Button';
 import Bytkar1 from '../components/atoms/Characters/Bytkar1.astro';
 import Bytkar2 from '../components/atoms/Characters/Bytkar2.astro';
+import { Container } from '../components/atoms/Container';
 import HeroSection from '../components/sections/home/HeroSection.astro';
 import InfoSection from '../components/sections/home/InfoSection.astro';
 import Polstare from '../images/polstare_s_logama.png';
@@ -26,7 +27,7 @@ const infoItems = [
   <HeroSection />
   <InfoSection items={infoItems} />
   <section class="py-16 md:py-24 lg:py-32">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+    <Container>
       <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-2 gap-y-12">
         <div class="md:col-span-2 xl:col-span-1 md:pr-16 lg:pr-12">
           <h2
@@ -34,11 +35,11 @@ const infoItems = [
           >
             Co je to Největší polštářová bytva?
           </h2>
-          <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900 mb-4 lg:mb-6">
+          <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-90 font-medium mb-4 lg:mb-6">
             Připravte se na nekonečnou porci zábavy, vzrušení a adrenalinu, protože se chystáme zaznamenat nový rekord v
             počtu bojovníků s polštáři na jednom místě.
           </p>
-          <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900">
+          <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900 font-medium">
             Chceš zbít polštářem svého kámoše? Poměřit svoje síly s taťkou? Nebo si zablbnout s babičkou jak za mlada? K
             tomu všemu ti dává možnost naše Polštářová bytva. Přijít může každý, kdo má srdce plné odvahy a chuť se
             utkat v nejepičtějším boji, který Česká republika kdy viděla.
@@ -48,10 +49,10 @@ const infoItems = [
           <Bytkar1 class="h-48 md:h-72 xl:h-96 [transform:rotateY(180deg)]" />
         </div>
       </div>
-    </div>
+    </Container>
   </section>
   <section class="py-16 md:py-24 lg:py-32 bg-gray-900/5">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+    <Container>
       <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-2 gap-y-12">
         <div class="md:col-span-2 xl:col-span-1 md:pl-16 lg:pl-12 order-1 md:order-2">
           <h2
@@ -59,11 +60,11 @@ const infoItems = [
           >
             Co všechno vás na naší bytvě čeká?
           </h2>
-          <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900 mb-4 lg:mb-6">
+          <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] font-medium text-gray-900 mb-4 lg:mb-6">
             Po každém vyčerpávajícím boji přichází hlad a žízeň, proto bude na místě konání i plno stánků, prostor k
             odpočinku, ale i hudba, hry a další aktivity.
           </p>
-          <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900">
+          <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] font-medium text-gray-900">
             Chystáme širokou škálu doprovodného programu, ve kterém si najdou svoje malí bojovníčci i velcí rváči.
             Hlavní náplní bude spánek, který s tématem úzce souvisí a chceme přenést do povědomí problémy, které se na
             něj vážou. Ale nebojte. Z naší bytvy mít noční můry určitě nebudete!
@@ -73,10 +74,10 @@ const infoItems = [
           <Bytkar2 class="h-48 md:h-72 xl:h-96" />
         </div>
       </div>
-    </div>
+    </Container>
   </section>
   <section class="py-16 md:py-24 lg:py-32">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+    <Container>
       <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-2 gap-y-12">
         <div class="md:col-span-2 xl:col-span-1 md:pr-16 lg:pr-12">
           <h2
@@ -84,10 +85,10 @@ const infoItems = [
           >
             Chceš aby se lidé bili ve tvém jméně ?
           </h2>
-          <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900 mb-4 lg:mb-6">
+          <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] font-medium text-gray-900 mb-4 lg:mb-6">
             Rozhodněte o tom, čí peří bude prolito v nelítostném polštářovém boji a přidejte se k nám jako partner.
           </p>
-          <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900 mb-4 lg:mb-6">
+          <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] font-medium text-gray-900 mb-4 lg:mb-6">
             Ozvěte se našim bytevním generálům, kteří se s vámi rádi spojí a do naší Největší polštářové bytvy vás
             zapojí tak, aby to bylo přesně dle vašich představ. Pojďte do toho s námi a staňte se součástí
             celorepublikového rekordu, o kterém budete vyprávět vnoučatům.
@@ -101,6 +102,6 @@ const infoItems = [
           <img src={Polstare.src} class="h-64 md:h-96 max-h-[32rem]" alt="" />
         </div>
       </div>
-    </div>
+    </Container>
   </section>
 </Layout>

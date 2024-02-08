@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { classNames } from '../../../utils';
 import { Button } from '../../atoms/Button';
+import { Container } from '../../atoms/Container';
 
 const items = [
   { title: 'Logo na webu', small: true, medium: true, large: true },
@@ -29,7 +30,7 @@ const items = [
 
 export const PricingSection = () => (
   <section className="py-16 md:py-24 lg:py-32">
-    <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+    <Container>
       <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 lg:mb-8 leading-snug text-gray-950">
         Partnerské balíčky
       </h2>
@@ -85,7 +86,7 @@ export const PricingSection = () => (
 
               <dl className="space-y-4">
                 {items.map((item) => (
-                  <div>
+                  <div key={item.title}>
                     <dt className="text-gray-700 font-medium text-lg">{item.title}</dt>
                     <dd>
                       {item.small ? (
@@ -156,6 +157,6 @@ export const PricingSection = () => (
           </SwiperSlide>
         </Swiper>
       </div>
-    </div>
+    </Container>
   </section>
 );

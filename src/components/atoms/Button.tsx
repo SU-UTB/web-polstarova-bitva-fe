@@ -9,7 +9,7 @@ type Props = { text: string; size: 'sm' | 'md' | 'lg'; variant: 'primary' | 'gra
 
 export const Button = (props: Props) => {
   const className = classNames(
-    'flex items-center justify-center font-medium tracking-wide rounded-xl transition duration-300 gap-4 group relative',
+    'flex items-center justify-center font-semibold tracking-wide rounded-xl transition duration-300 gap-4 group relative',
     props.size === 'sm' && 'py-3 px-6 text-base',
     props.size === 'md' && 'py-3 sm:py-4 px-8 sm:text-lg',
     props.size === 'lg' && 'py-4 sm:py-5 px-8 sm:px-9 text-lg sm:text-xl',
