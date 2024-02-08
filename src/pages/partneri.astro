@@ -1,6 +1,7 @@
 ---
 import Layout from '../components/Layout.astro';
-import PolstarImage from '../images/polstar.png';
+import Bytkar2 from '../components/atoms/Characters/Bytkar2.astro';
+import { PricingSection } from '../components/sections/partners/PricingSection';
 
 const metaTags = {
   title: 'Největší polštářová bitva v ČR',
@@ -29,98 +30,50 @@ const tableItems = [
 ];
 ---
 
-<style>
-  table td {
-    @apply border border-slate-300  px-4 py-2 transition duration-300;
-  }
-
-  table tr {
-    @apply transition duration-300;
-  }
-
-  table thead tr {
-    @apply bg-white;
-  }
-
-  table tbody tr:nth-child(odd) {
-    @apply bg-gray-50;
-  }
-
-  table tbody tr:nth-child(even) {
-    @apply bg-white;
-  }
-
-  table tbody tr:hover {
-    @apply bg-pink-600 text-pink-50;
-  }
-
-  table tbody tr:hover td {
-    @apply border-pink-500;
-  }
-
-  table td:not(:first-child) {
-    @apply text-center;
-  }
-</style>
-
 <Layout {...metaTags}>
-  <section class="max-w-6xl mx-auto px-4 pt-32 pb-16 space-y-10">
-    <div class="grid grid-cols-3">
-      <div class="col-span-2 space-y-6 pr-24">
-        <hgroup class="space-y-8">
-          <h1 class="text-6xl font-bold text-gray-900">Staňte se naším partnerem</h1>
-          <p class="text-primary-500 font-medium tracking-wide text-2xl">
-            Vráťte se společně s námi do dětství a překonejme národní rekord!
+  <section class="py-16 md:py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="md:col-span-2 space-y-6">
+          <hgroup class="space-y-4 md:space-y-6 lg:space-y-8">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-950">
+              Staňte se naším partnerem
+            </h1>
+            <p class="text-primary-600 font-semibold tracking-wide text-lg md:text-xl lg:text-2xl lg:max-w-2xl">
+              Vráťte se společně s námi do dětství a překonejme národní rekord!
+            </p>
+          </hgroup>
+          <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900 mb-4 lg:mb-6">
+            Rádi přizpůsobíme koncept a formu spolupráce vašim potřebám prostřednictvím individuální nabídky. Jsme
+            flexibilní a ochotní reagovat na vaše požadavky, abychom vytvořili vzájemně prospěšné partnerství. Připojte
+            se k nám a společně překonáme rekord!
           </p>
-        </hgroup>
-        <p class="leading-relaxed text-lg max-w-4xl">
-          Rádi přizpůsobíme koncept a formu spolupráce vašim potřebám prostřednictvím individuální nabídky. Jsme
-          flexibilní a ochotní reagovat na vaše požadavky, abychom vytvořili vzájemně prospěšné partnerství. Připojte se
-          k nám a společně překonáme rekord!
-        </p>
-      </div>
-      <div>
-        <img src={PolstarImage.src} alt="" />
+        </div>
+        <div class="flex justify-center">
+          <Bytkar2 class="h-48 md:h-72 xl:h-96" />
+        </div>
       </div>
     </div>
   </section>
-  <section class="max-w-6xl mx-auto px-4 py-16 space-y-10">
-    <h2 class="text-4xl font-bold text-gray-900">Partnerské balíčky</h2>
-    <table class="w-full">
-      <thead class="font-semibold text-lg">
-        <tr class="">
-          <td>Cena balíčku (bez DPH)</td>
-          <td>3 500 Kč</td>
-          <td>8 500 Kč</td>
-          <td>15 000 Kč</td>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          tableItems.map((item) => (
-            <tr>
-              <td>{item.title}</td>
-              <td>{item.small ? 'ANO' : ''}</td>
-              <td>{item.medium ? 'ANO' : ''}</td>
-              <td>{item.large ? 'ANO' : ''}</td>
-            </tr>
-          ))
-        }
-      </tbody>
-    </table>
-  </section>
-  <section class="max-w-6xl mx-auto px-4 py-24 space-y-4">
-    <h2 class="text-4xl font-bold text-gray-900 mb-6">Co je to polštářová bitva?</h2>
-    <p class="text-lg leading-relaxed max-w-3xl">
-      Polštářová Bytva je projekt, který pořádá nezisková organizace Studentská unie UTB, působící pod Univerzitou
-      Tomáše Bati ve Zlíně.
-    </p>
-    <p class="text-lg leading-relaxed max-w-3xl">
-      V rámci našeho projektu se budeme snažit překonat národní rekord v největší polštářové bitvě, ale také o vytvoření
-      nezapomenutelných zážitků a posílení pout mezi všemi účastníky.
-    </p>
-    <p class="text-lg leading-relaxed max-w-3xl">
-      Přidejte se k nám, vezměte polštáře a buďte součástí této jedinečné události!
-    </p>
+
+  <PricingSection client:load />
+
+  <section class="py-16 md:py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-gray-950 mb-6">Co je to polštářová bitva?</h2>
+      <div class="max-w-4xl">
+        <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900 mb-4 lg:mb-6">
+          Polštářová Bytva je projekt, který pořádá nezisková organizace Studentská unie UTB, působící pod Univerzitou
+          Tomáše Bati ve Zlíně.
+        </p>
+        <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900 mb-4 lg:mb-6">
+          V rámci našeho projektu se budeme snažit překonat národní rekord v největší polštářové bitvě, ale také o
+          vytvoření nezapomenutelných zážitků a posílení pout mezi všemi účastníky.
+        </p>
+        <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] text-gray-900">
+          Přidejte se k nám, vezměte polštáře a buďte součástí této jedinečné události!
+        </p>
+      </div>
+    </div>
   </section>
 </Layout>
