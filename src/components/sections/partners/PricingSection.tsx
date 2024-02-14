@@ -49,7 +49,7 @@ export const PricingSection = () => (
             <tr
               className={classNames(
                 'hover:bg-primary-600 transition duration-300 hover:text-white group hover:shadow-xl hover:shadow-primary-600/20 relative hover:z-10',
-                i % 2 == 0 ? 'bg-gray-50' : 'bg-gray-100',
+                i % 2 == 0 ? 'bg-gray-50' : 'bg-dark-100',
               )}
               key={item.title}
             >
