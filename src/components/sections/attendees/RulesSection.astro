@@ -1,0 +1,38 @@
+---
+import Feather from '../../../images/feather.webp';
+import { Container } from '../../atoms/Container';
+---
+
+<section class="py-16 md:py-24 lg:py-32 bg-dark overflow-hidden">
+  <Container>
+    <h2
+      class="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6 lg:mb-8 leading-snug text-primary-500"
+    >
+      Pravidla bytvy
+    </h2>
+    <img
+      src={Feather.src}
+      class="absolute -top-8 h-16 right-8 md:right-64 md:top-8 md:h-32 [transform:rotateY(180deg)] blur-[1px]"
+      alt=""
+    />
+    <img src={Feather.src} class="absolute right-4 lg:right-0 -bottom-12 md:top-48 h-24 md:h-64 blur-[1px]" alt="" />
+    <ul
+      class="sm:text-lg text-dark-100 list-disc pl-4 space-y-3 lg:space-y-4 lg:text-xl max-w-xl lg:max-w-none relative z-10"
+    >
+      <li>Cílem bytvy je se pobavit, vytvořit rekord, jedná se o recesi.</li>
+      <li>Každý se účastní na vlastní riziko.</li>
+      <li>Účastník je povinen brát ohled na bezpečnost všech účastníků.</li>
+      <li>Účastník je povinen respektovat pokyny pořadatelů.</li>
+      <li>Účastník je povinen respektovat hvizd píšťalky jako ukončení bytvy.</li>
+      <li>Bytva se odehrává ve vyhrazeném prostoru.</li>
+      <li>Zákaz vstupu s alkoholickými nápoji, zbraněmi, pyrotechnikou, ostrými předměty a podobně.</li>
+      <li>
+        Účastník je povinen respektovat <a
+          href="/navstevni-rad"
+          class="underline text-dark-50 font-semibold hover:text-primary-500 transition duration-300">návštěvní řád</a
+        >.
+      </li>
+      <li>Doporučujeme nebrat na akci drahé šperky, ostré módní doplňky a brýle.</li>
+    </ul>
+  </Container>
+</section>

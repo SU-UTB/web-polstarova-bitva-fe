@@ -1,0 +1,56 @@
+---
+import { Container } from '../../atoms/Container';
+
+const items = [
+  {
+    title: 'Kdy a kde se akce uskuteční?',
+    answer: 'Akce se uskuteční 20. 4. 2024 ve Zlíně. Přesnou lokaci upřesníme brzy.',
+  },
+  {
+    title: 'Musím si donést svůj vlastní polštář nebo ho dostanu?',
+    answer:
+      'Polštář si, prosíme, doneste svůj vlastní. Vzít si můžete malý polštářek, ale nevadí ani velký polštář nebo třeba kojicí polštář. Představivosti se meze nekladou. Polštáře mohou být vycpané peřím nebo plstí. Nějakou malou odměnou oceníme rváče s nejoriginálnějšími povlaky či tvary.',
+  },
+  {
+    title: 'Platí se startovné?',
+    answer: 'Je akce nějak věkově omezená?',
+  },
+  {
+    title: 'Je akce nějak věkově omezená?',
+    answer:
+      'Akce není věkově omezená a přijít může kdokoli. Můžete dorazit s partou přátel, celou rodinou, třídou nebo si z naší bytvy udělat teambuilding pro kolegy. A celý areál bude bezbariérový, proto se nemusíte bát ani kočárků, čí vozíků. Přijít mohou i malé děti, ale pouze v doprovodu rodičů.',
+  },
+  {
+    title: 'Jaký rekord budeme překonávat?',
+    answer: 'Budeme překonávat rekord z roku 2015. Tehdy se potkalo 704 lidí a bojovali spolu 5 minut.',
+  },
+  {
+    title: 'Co je zakázáno vnášet do areálu?',
+    answer:
+      'Do areálu je zakázán vstup s alkoholickými nápoji, zbraněmi, pyrotechnikou, ostrými předměty a podobně. Kompletní seznam naleznete v návštěvním řádu.',
+  },
+  {
+    title: 'Y ve slově “bytva” je schválně, nebo jste se jen špatně učili?',
+    answer:
+      'Sice netvrdíme, že se učíme dobře, ale Y píšeme ve slově “bytva” naprosto záměrně. Zaujalo vás to? Hmm, tak to jsme to asi vymysleli dobře. :)',
+  },
+];
+---
+
+<section class="py-16 md:py-24 lg:py-32">
+  <Container>
+    <h2 class="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6 lg:mb-8 leading-snug text-gray-950">
+      Nejčastější otázky
+    </h2>
+    <dl class="space-y-6 md:space-y-8">
+      {
+        items.map((item) => (
+          <div class="space-y-2">
+            <dt class="font-semibold text-lg md:text-xl text-dark-800">{item.title}</dt>
+            <dd class="leading-relaxed md:text-lg text-gray-900 md:leading-relaxed max-w-5xl">{item.answer}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </Container>
+</section>

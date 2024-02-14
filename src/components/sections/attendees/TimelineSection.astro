@@ -1,0 +1,40 @@
+---
+import { Container } from '../../atoms/Container';
+
+const items = [
+  { time: '13:00', title: 'Doprovodný program v areálu' },
+  { time: '14:00', title: 'Počítání účastníků' },
+  { time: '15:00', title: 'Začátek Největší polštářové Bytvy v ČR' },
+  { time: '15:15', title: 'Doprovodný program v areálu' },
+  { time: '18:00', title: 'Uzavření areálu' },
+  { time: '21:00', title: 'Afterparty' },
+];
+---
+
+<section class="py-16 md:py-24 lg:py-32">
+  <Container>
+    <h2 class="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6 lg:mb-8 leading-snug text-gray-950">
+      Harmonogram bytvy
+    </h2>
+    <div class="pl-4">
+      <ol class="relative space-y-10">
+        <div class="absolute flex items-center justify-center h-full">
+          <div class="border-l-2 border-dark-900 h-[calc(94%)]"></div>
+        </div>
+        {
+          items.map((item) => (
+            <li class="pl-6">
+              <div class="absolute w-4 h-4 bg-dark-900 rounded-full mt-1 -start-[7px] border border-dark-900 " />
+              <div class="flex gap-4">
+                <time datetime={item.time} class="text-dark-800 tracking-wide font-bold text-xl">
+                  {item.time}
+                </time>
+                <h3 class="text-lg font-medium text-gray-900">{item.title}</h3>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </Container>
+</section>
