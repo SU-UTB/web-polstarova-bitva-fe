@@ -1,23 +1,24 @@
 ---
+import { Image } from 'astro:assets';
 import Feather from '../../../images/feather.webp';
 import { Container } from '../../atoms/Container';
 ---
 
-<section class="py-16 md:py-24 lg:py-32 bg-dark overflow-hidden">
+<section class="overflow-hidden bg-dark py-16 md:py-24 lg:py-32">
   <Container>
     <h2
-      class="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6 lg:mb-8 leading-snug text-primary-500"
+      class="mb-4 text-3xl font-bold leading-snug text-primary-500 sm:text-4xl md:mb-6 md:text-5xl lg:mb-8 lg:text-6xl"
     >
       Pravidla bytvy
     </h2>
-    <img
-      src={Feather.src}
-      class="absolute -top-8 h-16 right-8 md:right-64 md:top-8 md:h-32 [transform:rotateY(180deg)] blur-[1px]"
+    <Image
+      src={Feather}
+      class="absolute -top-8 right-8 h-16 blur-[1px] [transform:rotateY(180deg)] md:right-64 md:top-8 md:h-32"
       alt=""
     />
-    <img src={Feather.src} class="absolute right-4 lg:right-0 -bottom-12 md:top-48 h-24 md:h-64 blur-[1px]" alt="" />
+    <Image src={Feather} class="absolute -bottom-12 right-4 h-24 blur-[1px] md:top-48 md:h-64 lg:right-0" alt="" />
     <ul
-      class="sm:text-lg text-dark-100 list-disc pl-4 space-y-3 lg:space-y-4 lg:text-xl max-w-xl lg:max-w-none relative z-10"
+      class="relative z-10 max-w-xl list-disc space-y-3 pl-4 text-dark-100 sm:text-lg lg:max-w-none lg:space-y-4 lg:text-xl"
     >
       <li>Cílem bytvy je se pobavit, vytvořit rekord, jedná se o recesi.</li>
       <li>Každý se účastní na vlastní riziko.</li>
@@ -31,7 +32,7 @@ import { Container } from '../../atoms/Container';
           href="https://drive.google.com/file/d/1OepWYBOcjaV0QcJQXlwbnmGA5nJBoN4C/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer external"
-          class="underline text-dark-50 font-semibold hover:text-primary-500 transition duration-300">návštěvní řád</a
+          class="font-semibold text-dark-50 underline transition duration-300 hover:text-primary-500">návštěvní řád</a
         >.
       </li>
       <li>Doporučujeme nebrat na akci drahé šperky, ostré módní doplňky a brýle.</li>

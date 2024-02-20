@@ -2,23 +2,23 @@
 import { Icon } from '../atoms/Icon';
 ---
 
-<footer class="bg-dark pt-12 pb-8">
-  <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 space-y-2 mb-6">
+<footer class="bg-dark pb-8 pt-12">
+  <div class="mx-auto mb-6 max-w-7xl space-y-2 px-4 md:px-6 lg:px-8">
     <nav
-      class="text-dark-300 gap-2 flex flex-col sm:flex-row justify-center font-medium tracking-wide items-center text-lg"
+      class="flex flex-col items-center justify-center gap-2 text-lg font-medium tracking-wide text-dark-300 sm:flex-row"
       aria-label="Footer"
     >
-      <a class="px-4 py-4 block hover:text-primary-500 transition duration-300" href="/">Domů</a>
-      <a class="px-4 py-4 block hover:text-primary-500 transition duration-300" href="/partneri">Partneři</a>
-      <a class="px-4 py-4 block hover:text-primary-500 transition duration-300" href="/ucastnici">Účastníci</a>
-      <a class="px-4 py-4 block hover:text-primary-500 transition duration-300" href="/kontakt">Kontakt</a>
+      <a class="block px-4 py-4 transition duration-300 hover:text-primary-500" href="/">Domů</a>
+      <a class="block px-4 py-4 transition duration-300 hover:text-primary-500" href="/partneri">Partneři</a>
+      <a class="block px-4 py-4 transition duration-300 hover:text-primary-500" href="/ucastnici">Účastníci</a>
+      <a class="block px-4 py-4 transition duration-300 hover:text-primary-500" href="/kontakt">Kontakt</a>
     </nav>
     <nav
-      class="text-dark-300 gap-2 flex flex-col sm:flex-row justify-center font-medium tracking-wide items-center text-lg"
+      class="flex items-center justify-center gap-2 text-lg font-medium tracking-wide text-dark-300 sm:flex-row"
       aria-label="Social media"
     >
       <a
-        class="px-3 py-3 block hover:text-primary-500 transition duration-300"
+        class="block px-3 py-3 transition duration-300 hover:text-primary-500"
         href="https://www.facebook.com/profile.php?id=61556237693905"
         target="_blank"
         rel="noopener noreferrer external"
@@ -27,7 +27,7 @@ import { Icon } from '../atoms/Icon';
         <Icon name="facebook" className="h-8" /></a
       >
       <a
-        class="px-3 py-3 block hover:text-primary-500 transition duration-300"
+        class="block px-3 py-3 transition duration-300 hover:text-primary-500"
         href="https://www.instagram.com/su_rekordista/"
         target="_blank"
         rel="noopener noreferrer external"
@@ -37,7 +37,7 @@ import { Icon } from '../atoms/Icon';
       >
     </nav>
   </div>
-  <p class="text-center text-base text-dark-400 font-light px-4">
+  <p class="px-4 text-center text-base font-light text-dark-400">
     &copy; 2024 - {new Date().getFullYear()} Studentská unie UTB, všechna práva vyhrazena.
   </p>
 </footer>

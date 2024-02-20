@@ -110,7 +110,7 @@ export const Header = () => {
                           <Menu.Item>
                             <a
                               className="block w-full py-2 text-center text-lg font-medium duration-300 ui-active:text-primary-600"
-                              href="/o-nas"
+                              href="/ucastnici"
                             >
                               Pro bytkaře
                             </a>
@@ -118,7 +118,7 @@ export const Header = () => {
                           <Menu.Item>
                             <a
                               className="block w-full py-2 text-center text-lg font-medium transition duration-300 ui-active:text-primary-600"
-                              href="/pridej-se-k-nam"
+                              href="/partneri"
                             >
                               Pro partnery
                             </a>
