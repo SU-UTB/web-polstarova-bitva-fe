@@ -31,24 +31,24 @@ const items = [
 export const PricingSection = () => (
   <section className="py-16 md:py-24 lg:py-32">
     <Container>
-      <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 lg:mb-8 leading-snug text-gray-950">
+      <h2 className="mb-4 text-3xl font-bold leading-snug text-gray-950 sm:text-4xl md:text-5xl lg:mb-8 lg:text-6xl">
         Partnerské balíčky
       </h2>
 
-      <table className="w-full hidden lg:table rounded-xl overflow-hidden shadow-xl shadow-gray-700/20">
+      <table className="hidden w-full overflow-hidden rounded-xl shadow-xl shadow-gray-700/20 lg:table">
         <thead className="font-semibold ">
-          <tr className="bg-white text-xl font-bold shadow-xl shadow-black/5 relative z-20">
-            <td className="py-5 px-4 ">Cena balíčku (bez DPH)</td>
-            <td className="py-5 px-4 text-center">3 500 Kč</td>
-            <td className="py-5 px-4 text-center">8 500 Kč</td>
-            <td className="py-5 px-4 text-center">15 000 Kč</td>
+          <tr className="relative z-20 bg-white text-xl font-bold shadow-xl shadow-black/5">
+            <td className="px-4 py-5 ">Cena balíčku (bez DPH)</td>
+            <td className="px-4 py-5 text-center">3 500 Kč</td>
+            <td className="px-4 py-5 text-center">8 500 Kč</td>
+            <td className="px-4 py-5 text-center">15 000 Kč</td>
           </tr>
         </thead>
         <tbody className="divide-y">
           {items.map((item, i) => (
             <tr
               className={classNames(
-                'hover:bg-primary-600 transition duration-300 hover:text-white group hover:shadow-xl hover:shadow-primary-600/20 relative hover:z-10',
+                'group relative transition duration-300 hover:z-10 hover:bg-primary-600 hover:text-white hover:shadow-xl hover:shadow-primary-600/20',
                 i % 2 == 0 ? 'bg-gray-50' : 'bg-dark-100',
               )}
               key={item.title}
@@ -67,7 +67,7 @@ export const PricingSection = () => (
           slidesPerView={1.2}
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
-          className="bg-gray-50 rounded-xl  shadow-xl "
+          className="rounded-xl bg-gray-50  shadow-xl "
           wrapperClass="divide-x-2 divide-x-gray-900"
           centeredSlides
           breakpoints={{
@@ -78,21 +78,21 @@ export const PricingSection = () => (
           }}
         >
           <SwiperSlide>
-            <li className="px-5 pt-12 pb-6 text-center w-fit space-y-8">
-              <hgroup className="space-y-2 mb-8">
-                <p className="text-gray-700 font-medium">Cena balíčku (bez DPH)</p>
-                <h2 className="text-gray-900 font-bold text-4xl">3 500 Kč</h2>
+            <li className="w-fit space-y-8 px-5 pb-6 pt-12 text-center">
+              <hgroup className="mb-8 space-y-2">
+                <p className="font-medium text-gray-700">Cena balíčku (bez DPH)</p>
+                <h2 className="text-4xl font-bold text-gray-900">3 500 Kč</h2>
               </hgroup>
 
               <dl className="space-y-4">
                 {items.map((item) => (
                   <div key={item.title}>
-                    <dt className="text-gray-700 font-medium text-lg">{item.title}</dt>
+                    <dt className="text-lg font-medium text-gray-700">{item.title}</dt>
                     <dd>
                       {item.small ? (
-                        <span className="text-green-600 font-bold">ANO</span>
+                        <span className="font-bold text-green-600">ANO</span>
                       ) : (
-                        <span className="text-red-600 font-bold">NE</span>
+                        <span className="font-bold text-red-600">NE</span>
                       )}
                     </dd>
                   </div>
@@ -104,21 +104,21 @@ export const PricingSection = () => (
             </li>
           </SwiperSlide>
           <SwiperSlide>
-            <li className="px-5 pt-12 pb-6 text-center w-fit space-y-8">
-              <hgroup className="space-y-2 mb-8">
-                <p className="text-gray-700 font-medium">Cena balíčku (bez DPH)</p>
-                <h2 className="text-gray-900 font-bold text-4xl">8 500 Kč</h2>
+            <li className="w-fit space-y-8 px-5 pb-6 pt-12 text-center">
+              <hgroup className="mb-8 space-y-2">
+                <p className="font-medium text-gray-700">Cena balíčku (bez DPH)</p>
+                <h2 className="text-4xl font-bold text-gray-900">8 500 Kč</h2>
               </hgroup>
 
               <dl className="space-y-4">
                 {items.map((item) => (
                   <div>
-                    <dt className="text-gray-700 font-medium text-lg">{item.title}</dt>
+                    <dt className="text-lg font-medium text-gray-700">{item.title}</dt>
                     <dd>
                       {item.medium ? (
-                        <span className="text-green-600 font-bold">ANO</span>
+                        <span className="font-bold text-green-600">ANO</span>
                       ) : (
-                        <span className="text-red-600 font-bold">NE</span>
+                        <span className="font-bold text-red-600">NE</span>
                       )}
                     </dd>
                   </div>
@@ -130,21 +130,21 @@ export const PricingSection = () => (
             </li>
           </SwiperSlide>
           <SwiperSlide>
-            <li className="px-5 pt-12 pb-6 text-center w-fit space-y-8">
-              <hgroup className="space-y-2 mb-8">
-                <p className="text-gray-700 font-medium">Cena balíčku (bez DPH)</p>
-                <h2 className="text-gray-900 font-bold text-4xl">15 000 Kč</h2>
+            <li className="w-fit space-y-8 px-5 pb-6 pt-12 text-center">
+              <hgroup className="mb-8 space-y-2">
+                <p className="font-medium text-gray-700">Cena balíčku (bez DPH)</p>
+                <h2 className="text-4xl font-bold text-gray-900">15 000 Kč</h2>
               </hgroup>
 
               <dl className="space-y-4">
                 {items.map((item) => (
                   <div>
-                    <dt className="text-gray-700 font-medium text-lg">{item.title}</dt>
+                    <dt className="text-lg font-medium text-gray-700">{item.title}</dt>
                     <dd>
                       {item.large ? (
-                        <span className="text-green-600 font-bold">ANO</span>
+                        <span className="font-bold text-green-600">ANO</span>
                       ) : (
-                        <span className="text-red-600 font-bold">NE</span>
+                        <span className="font-bold text-red-600">NE</span>
                       )}
                     </dd>
                   </div>

@@ -17,12 +17,12 @@ export const Header = () => {
 
   return (
     <header className="py-5 sm:py-6 md:py-8 lg:py-10">
-      <nav className="lg:max-w-7xl px-4 md:px-6 lg:px-8 mx-auto flex justify-between items-center">
-        <a href="/" className="flex gap-3 uppercase font-bold items-center relative z-10 font-heading">
-          <img src={polstare.src} className="h-14 md:h-16 lg:h-20 -my-2.5 sm:-my-3 md:-my4" alt="" />
+      <nav className="mx-auto flex items-center justify-between px-4 md:px-6 lg:max-w-7xl lg:px-8">
+        <a href="/" className="relative z-10 flex items-center gap-3 font-heading font-bold uppercase">
+          <img src={polstare.src} className="md:-my4 -my-2.5 h-14 sm:-my-3 md:h-16 lg:h-20" alt="" />
           <span className="sr-only">SuRekordista</span>
         </a>
-        <div className="hidden md:flex items-center gap-8 font-medium text-slate-700 text-lg lg:text-xl">
+        <div className="hidden items-center gap-8 text-lg font-medium text-slate-700 md:flex lg:text-xl">
           <a className="px-2 py-1" href="/ucastnici">
             Pro bytkaře
           </a>
@@ -39,7 +39,7 @@ export const Header = () => {
 
             return (
               <>
-                <Menu.Button className="p-2 h-[40px] w-[40px] -my-2 fixed flex z-30 right-4 top-6 sm:top-7 sm:right-6 bg-primary-600 rounded-lg shadow-primary-600/20 shadow text-white md:hidden">
+                <Menu.Button className="fixed right-4 top-6 z-30 -my-2 flex h-[40px] w-[40px] rounded-lg bg-primary-600 p-2 text-white shadow shadow-primary-600/20 sm:right-6 sm:top-7 md:hidden">
                   <Transition
                     show={!open}
                     as="span"
@@ -51,7 +51,7 @@ export const Header = () => {
                     leaveTo="opacity-0"
                     className="absolute"
                   >
-                    <Icon name="menu" className="w-6 h-6" />
+                    <Icon name="menu" className="h-6 w-6" />
                   </Transition>
                   <Transition
                     show={open}
@@ -64,13 +64,13 @@ export const Header = () => {
                     leaveTo="opacity-0"
                     className="absolute"
                   >
-                    <Icon name="close" className="w-6 h-6" />
+                    <Icon name="close" className="h-6 w-6" />
                   </Transition>
 
                   <span className="sr-only">{open ? 'Zavřít menu' : 'Otevřít menu'}</span>
                 </Menu.Button>
                 <Transition enter="" enterFrom="" enterTo="" leave="" leaveFrom="" leaveTo="" as={React.Fragment}>
-                  <Menu.Items className="fixed left-0 right-0 top-0 bottom-0 flex z-20">
+                  <Menu.Items className="fixed bottom-0 left-0 right-0 top-0 z-20 flex">
                     <Transition.Child
                       as={React.Fragment}
                       enter="transition duration-300 ease-in-out"
@@ -80,7 +80,7 @@ export const Header = () => {
                       leaveFrom="opacity-100"
                       leaveTo="opacity-0"
                     >
-                      <div className="bg-dark/80  flex-grow absolute inset-0 w-full h-full"></div>
+                      <div className="absolute  inset-0 h-full w-full flex-grow bg-dark/80"></div>
                     </Transition.Child>
                     <Transition.Child
                       as={React.Fragment}
@@ -91,8 +91,8 @@ export const Header = () => {
                       leaveFrom="opacity-100"
                       leaveTo="opacity-0"
                     >
-                      <div className="absolute flex gap-4 pt-5 pl-4 sm:pt-6 sm:pl-5 uppercase font-bold tracking-wider items-center text-stone-50 z-20">
-                        <img src={polstare.src} className="h-14 -my-2.5 sm:-my-3 md:-my4" alt="" />
+                      <div className="absolute z-20 flex items-center gap-4 pl-4 pt-5 font-bold uppercase tracking-wider text-stone-50 sm:pl-5 sm:pt-6">
+                        <img src={polstare.src} className="md:-my4 -my-2.5 h-14 sm:-my-3" alt="" />
                         <span className="sr-only">SuRekordista</span>
                       </div>
                     </Transition.Child>
@@ -105,11 +105,11 @@ export const Header = () => {
                       leaveFrom="opacity-100"
                       leaveTo="translate-x-full"
                     >
-                      <div className="bg-dark w-full h-full pb-5 pt-[calc(52px+1.25rem)] sm:py-6 px-4 sm:px-6 text-stone-100 relative z-10">
-                        <div className="flex flex-col h-full space-y-8 items-center justify-center">
+                      <div className="relative z-10 h-full w-full bg-dark px-4 pb-5 pt-[calc(52px+1.25rem)] text-stone-100 sm:px-6 sm:py-6">
+                        <div className="flex h-full flex-col items-center justify-center space-y-8">
                           <Menu.Item>
                             <a
-                              className="ui-active:text-primary-600 block w-full py-2 text-lg font-medium text-center duration-300"
+                              className="block w-full py-2 text-center text-lg font-medium duration-300 ui-active:text-primary-600"
                               href="/o-nas"
                             >
                               Pro bytkaře
@@ -117,7 +117,7 @@ export const Header = () => {
                           </Menu.Item>
                           <Menu.Item>
                             <a
-                              className="ui-active:text-primary-600 block w-full py-2 text-lg font-medium text-center transition duration-300"
+                              className="block w-full py-2 text-center text-lg font-medium transition duration-300 ui-active:text-primary-600"
                               href="/pridej-se-k-nam"
                             >
                               Pro partnery

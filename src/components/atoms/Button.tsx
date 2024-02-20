@@ -24,10 +24,10 @@ export const Button = (props: Props) => {
   if (props.type === 'link')
     return (
       <a className={className} href={props.href}>
-        <div className="absolute inset-0 group-hover:bg-white/20 transition duration-300 rounded-xl"></div>
+        <div className="absolute inset-0 rounded-xl transition duration-300 group-hover:bg-white/20"></div>
         <span className="relative">{props.text}</span>
         {props.icon && (
-          <Icon className="relative h-6 w-6 -mr-3 group-hover:scale-110 transition duration-300" name={props.icon} />
+          <Icon className="relative -mr-3 h-6 w-6 transition duration-300 group-hover:scale-110" name={props.icon} />
         )}
       </a>
     );

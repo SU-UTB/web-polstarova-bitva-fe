@@ -1,16 +1,43 @@
-<footer class="bg-dark">
-  <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-16">
+---
+import { Icon } from '../atoms/Icon';
+---
+
+<footer class="bg-dark pt-12 pb-8">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 space-y-2 mb-6">
     <nav
-      class="text-dark-200 space-x-2 flex justify-center font-medium tracking-wide items-center text-lg"
+      class="text-dark-300 gap-2 flex flex-col sm:flex-row justify-center font-medium tracking-wide items-center text-lg"
       aria-label="Footer"
     >
-      <a class="px-4 py-2 block hover:text-primary-500 transition duration-300" href="/">Domů</a>
-      <a class="px-4 py-2 block hover:text-primary-500 transition duration-300" href="/partneri">Partneři</a>
-      <a class="px-4 py-2 block hover:text-primary-500 transition duration-300" href="/ucastnici">Účastníci</a>
-      <a class="px-4 py-2 block hover:text-primary-500 transition duration-300" href="/kontakt">Kontakt</a>
+      <a class="px-4 py-4 block hover:text-primary-500 transition duration-300" href="/">Domů</a>
+      <a class="px-4 py-4 block hover:text-primary-500 transition duration-300" href="/partneri">Partneři</a>
+      <a class="px-4 py-4 block hover:text-primary-500 transition duration-300" href="/ucastnici">Účastníci</a>
+      <a class="px-4 py-4 block hover:text-primary-500 transition duration-300" href="/kontakt">Kontakt</a>
+    </nav>
+    <nav
+      class="text-dark-300 gap-2 flex flex-col sm:flex-row justify-center font-medium tracking-wide items-center text-lg"
+      aria-label="Social media"
+    >
+      <a
+        class="px-3 py-3 block hover:text-primary-500 transition duration-300"
+        href="https://www.facebook.com/profile.php?id=61556237693905"
+        target="_blank"
+        rel="noopener noreferrer external"
+        title="Facebook - Surekordista"
+      >
+        <Icon name="facebook" className="h-8" /></a
+      >
+      <a
+        class="px-3 py-3 block hover:text-primary-500 transition duration-300"
+        href="https://www.instagram.com/su_rekordista/"
+        target="_blank"
+        rel="noopener noreferrer external"
+        title="Instagram - Surekordista"
+      >
+        <Icon name="instagram" className="h-8" /></a
+      >
     </nav>
   </div>
-  <p class="text-center text-base text-dark-300 py-6 px-4">
+  <p class="text-center text-base text-dark-400 font-light px-4">
     &copy; 2024 - {new Date().getFullYear()} Studentská unie UTB, všechna práva vyhrazena.
   </p>
 </footer>
