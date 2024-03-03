@@ -1,8 +1,10 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../components/Layout.astro';
 import FaqSection from '../components/sections/attendees/FaqSection.astro';
 import RulesSection from '../components/sections/attendees/RulesSection.astro';
 import TimelineSection from '../components/sections/attendees/TimelineSection.astro';
+import image from '../images/ucastnici/hero.png';
 
 const metaTags = {
   title: 'Největší polštářová bitva v ČR',
@@ -11,10 +13,12 @@ const metaTags = {
 ---
 
 <Layout {...metaTags}>
-  <section class="max-w-6xl mx-auto px-4 pt-36 pb-16 space-y-10 min-h-screen">
-    <div class="container mx-auto text-center">
-      <h1 class="text-5xl font-bold text-gray-900">Připravujeme</h1>
-    </div>
+  <section
+    class="mx-auto flex flex-col items-center justify-between px-4 pb-16 pt-32 md:h-[calc(100vh-104px)] md:px-6 md:py-8 lg:h-[calc(100vh-136px)] lg:max-w-6xl lg:px-8"
+  >
+    <h1 class="flex flex-grow items-center justify-center pb-16">
+      <Image class="w-full" src={image} alt="Zlín 20.4.2024 vstup zdarma" loading="eager" />
+    </h1>
   </section>
   <TimelineSection />
   <RulesSection />
