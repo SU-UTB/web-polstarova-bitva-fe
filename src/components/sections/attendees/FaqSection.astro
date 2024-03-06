@@ -13,7 +13,7 @@ const items = [
   },
   {
     title: 'Platí se startovné?',
-    answer: 'Je akce nějak věkově omezená?',
+    answer: 'Ne, žádné startovné ani vstup se neplatí. Akce je zcela zdarma. ',
   },
   {
     title: 'Je akce nějak věkově omezená?',
@@ -39,15 +39,15 @@ const items = [
 
 <section class="py-16 md:py-24 lg:py-32">
   <Container>
-    <h2 class="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6 lg:mb-8 leading-snug text-gray-950">
+    <h2 class="mb-4 text-3xl font-bold leading-snug text-gray-950 sm:text-4xl md:mb-6 md:text-5xl lg:mb-8 lg:text-6xl">
       Nejčastější otázky
     </h2>
     <dl class="space-y-6 md:space-y-8">
       {
         items.map((item) => (
           <div class="space-y-2">
-            <dt class="font-semibold text-lg md:text-xl text-dark-800">{item.title}</dt>
-            <dd class="leading-relaxed md:text-lg text-gray-900 md:leading-relaxed max-w-5xl">{item.answer}</dd>
+            <dt class="text-lg font-semibold text-dark-800 md:text-xl">{item.title}</dt>
+            <dd class="max-w-5xl leading-relaxed text-gray-900 md:text-lg md:leading-relaxed">{item.answer}</dd>
           </div>
         ))
       }
