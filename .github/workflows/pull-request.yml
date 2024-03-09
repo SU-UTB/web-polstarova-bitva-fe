@@ -20,9 +20,10 @@ jobs:
       urls: ${{ steps.deploy.outputs.urls }}
   lighthouse:
     runs-on: ubuntu-latest
+    needs: build_and_preview
     steps:
       - uses: actions/checkout@master
       - name: Lighthouse
         uses: foo-software/lighthouse-check-action@master
         with:
-          urls: ${{needs.job1.outputs.output1}}
+          urls: ${{ fromJson(needs.job1.outputs.urls)[0] }}
