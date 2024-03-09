@@ -1,0 +1,45 @@
+---
+import { Button, Container, H2, Text } from '@components/atoms';
+import Feather from '@images/feather.webp';
+import Polstare from '@images/home/polstare_s_logama.png';
+import { Image } from 'astro:assets';
+---
+
+<section class="py-16 md:py-24 lg:py-32">
+  <Container>
+    <div class="grid grid-cols-1 gap-y-12 md:grid-cols-3 xl:grid-cols-2">
+      <div class="md:col-span-2 md:pr-16 lg:pr-12 xl:col-span-1">
+        <H2>Chceš aby se lidé bili ve tvém jméně ?</H2>
+        <Text>
+          Rozhodněte o tom, čí peří bude prolito v nelítostném polštářovém boji a přidejte se k nám jako partner.
+        </Text>
+        <Text>
+          Ozvěte se našim bytevním generálům, kteří se s vámi rádi spojí a do naší Největší polštářové bytvy vás zapojí
+          tak, aby to bylo přesně dle vašich představ. Pojďte do toho s námi a staňte se součástí celorepublikového
+          rekordu, o kterém budete vyprávět vnoučatům.
+        </Text>
+        <div class="mt-6 flex flex-col items-end gap-x-4 gap-y-2.5 sm:mt-8 sm:flex-row">
+          <Button type="link" text="Kontaktujte nás" variant="primary" size="md" href="/kontakt" icon="love" />
+          <Button type="link" text="Více informací" variant="gray" size="md" href="/partneri" />
+        </div>
+      </div>
+      <div class="flex items-center justify-center lg:justify-end">
+        <div class="relative">
+          <img src={Polstare.src} class="h-64 max-h-[32rem] md:h-96" alt="" />
+          <Image
+            src={Feather}
+            class="absolute -left-16 -top-8 h-16 w-fit blur-[1px] [transform:rotate(330deg)] md:-top-32 md:h-32 lg:-left-32 lg:-top-24"
+            alt=""
+            loading="lazy"
+          />
+          <Image
+            src={Feather}
+            class="absolute -right-12 bottom-0 h-16 w-fit blur-[1px] [transform:rotate(180deg)] md:-bottom-12 md:right-4 md:h-20 lg:-right-16 lg:h-32"
+            alt=""
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

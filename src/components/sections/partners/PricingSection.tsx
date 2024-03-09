@@ -2,10 +2,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
+import { Button, Container, H2 } from '@components/atoms';
 import 'swiper/css';
 import { classNames } from '../../../utils';
-import { Button } from '../../atoms/Button';
-import { Container } from '../../atoms/Container';
 
 const items = [
   { title: 'Logo na webu', small: true, medium: true, large: true },
@@ -31,9 +30,7 @@ const items = [
 export const PricingSection = () => (
   <section className="py-16 md:py-24 lg:py-32">
     <Container>
-      <h2 className="mb-4 text-3xl font-bold leading-snug text-gray-950 sm:text-4xl md:text-5xl lg:mb-8 lg:text-6xl">
-        Partnerské balíčky
-      </h2>
+      <H2>Partnerské balíčky</H2>
 
       <table className="hidden w-full overflow-hidden rounded-xl shadow-xl shadow-gray-700/20 lg:table">
         <thead className="font-semibold ">
@@ -81,7 +78,7 @@ export const PricingSection = () => (
             <li className="w-fit space-y-8 px-5 pb-6 pt-12 text-center">
               <hgroup className="mb-8 space-y-2">
                 <p className="font-medium text-gray-700">Cena balíčku (bez DPH)</p>
-                <h2 className="text-4xl font-bold text-gray-900">3 500 Kč</h2>
+                <h3 className="text-4xl font-bold text-gray-900">3 500 Kč</h3>
               </hgroup>
 
               <dl className="space-y-4">
@@ -107,7 +104,7 @@ export const PricingSection = () => (
             <li className="w-fit space-y-8 px-5 pb-6 pt-12 text-center">
               <hgroup className="mb-8 space-y-2">
                 <p className="font-medium text-gray-700">Cena balíčku (bez DPH)</p>
-                <h2 className="text-4xl font-bold text-gray-900">8 500 Kč</h2>
+                <h3 className="text-4xl font-bold text-gray-900">8 500 Kč</h3>
               </hgroup>
 
               <dl className="space-y-4">
@@ -133,7 +130,7 @@ export const PricingSection = () => (
             <li className="w-fit space-y-8 px-5 pb-6 pt-12 text-center">
               <hgroup className="mb-8 space-y-2">
                 <p className="font-medium text-gray-700">Cena balíčku (bez DPH)</p>
-                <h2 className="text-4xl font-bold text-gray-900">15 000 Kč</h2>
+                <h3 className="text-4xl font-bold text-gray-900">15 000 Kč</h3>
               </hgroup>
 
               <dl className="space-y-4">

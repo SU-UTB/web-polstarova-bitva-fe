@@ -1,0 +1,36 @@
+---
+import { Container, H2, Text } from '@components/atoms';
+import Bytkar2 from '@components/atoms/Characters/Bytkar2.astro';
+import Feather from '@images/feather.webp';
+import { Image } from 'astro:assets';
+---
+
+<section class="overflow-hidden bg-gray-900/5 py-16 md:py-24 lg:py-32">
+  <Container>
+    <div class="grid grid-cols-1 gap-y-12 md:grid-cols-3 xl:grid-cols-2">
+      <div class="order-1 md:order-2 md:col-span-2 md:pl-16 lg:pl-12 xl:col-span-1">
+        <H2>Co všechno vás na naší bytvě čeká?</H2>
+        <Text>
+          Po každém vyčerpávajícím boji přichází hlad a žízeň, proto bude na místě konání i plno stánků, prostor k
+          odpočinku, ale i hudba, hry a další aktivity.
+        </Text>
+        <Text>
+          Chystáme širokou škálu doprovodného programu, ve kterém si najdou svoje malí bojovníčci i velcí rváči. Hlavní
+          náplní bude spánek, který s tématem úzce souvisí a chceme přenést do povědomí problémy, které se na něj vážou.
+          Ale nebojte. Z naší bytvy mít noční můry určitě nebudete!
+        </Text>
+      </div>
+      <div class="relative order-2 flex items-center justify-center md:order-1 lg:justify-start">
+        <div class="relative">
+          <Bytkar2 class="h-48 md:h-72 xl:h-96" />
+          <Image
+            src={Feather}
+            class="absolute -left-16 bottom-0 h-16 w-fit blur-[1px] [transform:rotate(250deg)] md:-bottom-12 md:left-4 md:h-20 lg:-left-24 lg:h-32"
+            alt=""
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

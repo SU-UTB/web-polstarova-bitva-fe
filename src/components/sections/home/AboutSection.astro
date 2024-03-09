@@ -1,0 +1,42 @@
+---
+import { Container, H2, Text } from '@components/atoms';
+import Bytkar1 from '@components/atoms/Characters/Bytkar1.astro';
+import Feather from '@images/feather.webp';
+import { Image } from 'astro:assets';
+---
+
+<section class="overflow-hidden py-16 md:py-24 lg:py-32">
+  <Container>
+    <div class="grid grid-cols-1 gap-y-12 md:grid-cols-3 xl:grid-cols-2">
+      <div class="md:col-span-2 md:pr-16 lg:pr-12 xl:col-span-1">
+        <H2>Co je to Největší polštářová bytva?</H2>
+        <Text>
+          Připravte se na nekonečnou porci zábavy, vzrušení a adrenalinu, protože se chystáme zaznamenat nový rekord v
+          počtu bojovníků s polštáři na jednom místě.
+        </Text>
+        <Text>
+          Chceš zbít polštářem svého kámoše? Poměřit svoje síly s taťkou? Nebo si zablbnout s babičkou jak za mlada? K
+          tomu všemu ti dává možnost naše Polštářová bytva. Přijít může každý, kdo má srdce plné odvahy a chuť se utkat
+          v nejepičtějším boji, který Česká republika kdy viděla.
+        </Text>
+      </div>
+      <div class="relative flex items-center justify-center lg:justify-end">
+        <div class="relative">
+          <Bytkar1 class="h-48 [transform:rotateY(180deg)] md:h-72 xl:h-96" />
+          <Image
+            src={Feather}
+            class="absolute -left-16 -top-8 h-16 w-fit blur-[1px] [transform:rotate(150deg)] md:-top-32 md:h-32 lg:-left-32 lg:-top-24"
+            alt=""
+            loading="lazy"
+          />
+          <Image
+            src={Feather}
+            class="absolute -right-12 bottom-0 h-16 w-fit blur-[1px] [transform:rotate(70deg)] md:-bottom-12 md:right-4 md:h-20 lg:-right-16 lg:h-32"
+            alt=""
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

@@ -1,16 +1,12 @@
 ---
+import { Container, H2 } from '@components/atoms';
+import Feather from '@images/feather.webp';
 import { Image } from 'astro:assets';
-import Feather from '../../../images/feather.webp';
-import { Container } from '../../atoms/Container';
 ---
 
 <section class="overflow-hidden bg-dark py-16 md:py-24 lg:py-32">
   <Container>
-    <h2
-      class="mb-4 text-3xl font-bold leading-snug text-primary-500 sm:text-4xl md:mb-6 md:text-5xl lg:mb-8 lg:text-6xl"
-    >
-      Pravidla bytvy
-    </h2>
+    <H2 color="primary">Pravidla bytvy</H2>
     <Image
       src={Feather}
       class="absolute -top-8 right-8 h-16 w-fit blur-[1px] [transform:rotateY(180deg)] md:right-64 md:top-8 md:h-32"

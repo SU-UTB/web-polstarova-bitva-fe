@@ -1,40 +1,18 @@
 ---
-import Layout from '../components/Layout.astro';
-import { Button } from '../components/atoms/Button';
-import { Container } from '../components/atoms/Container';
-import IntroSection from '../components/sections/partners/IntroSection.astro';
-import { PricingSection } from '../components/sections/partners/PricingSection';
+import Layout from '@components/Layout.astro';
+import AboutSection from '@components/sections/partners/AboutSection.astro';
+import IntroSection from '@components/sections/partners/IntroSection.astro';
+import { PricingSection } from '@components/sections/partners/PricingSection';
 
 const metaTags = {
-  title: 'Největší polštářová bitva v ČR',
-  description: 'Největší polštářová bitva v České Republice, pořádaná v roce 2024',
+  title: 'Partneři | Největší polštářová bitva v ČR | Zlín 20.4.2024',
+  description:
+    ' Staňte se naším partnerem. Vráťte se společně s námi do dětství a překonejme národní rekord! Rádi přizpůsobíme koncept a formu spolupráce vašim potřebám prostřednictvím individuální nabídky. ',
 };
 ---
 
 <Layout {...metaTags}>
   <IntroSection />
   <PricingSection client:load />
-  <section class="pb-16 md:pb-24 lg:pb-32">
-    <Container>
-      <h2 class="mb-4 text-3xl font-bold leading-snug text-gray-950 sm:text-4xl md:text-5xl lg:mb-8 lg:text-6xl">
-        Co je to polštářová bitva?
-      </h2>
-      <div class="max-w-4xl">
-        <p class="mb-4 font-medium text-gray-900 sm:text-lg sm:leading-[1.75] lg:mb-6 lg:text-xl lg:leading-[1.75]">
-          Polštářová Bitva je projekt, který pořádá nezisková organizace Studentská unie UTB, působící pod Univerzitou
-          Tomáše Bati ve Zlíně.
-        </p>
-        <p class="mb-4 font-medium text-gray-900 sm:text-lg sm:leading-[1.75] lg:mb-6 lg:text-xl lg:leading-[1.75]">
-          V rámci našeho projektu se budeme snažit překonat národní rekord v největší polštářové bitvě, ale také
-          vytvořit nezapomenutelné zážitky a posílit pouta mezi všemi účastníky.
-        </p>
-        <p class="mb-4 font-medium text-gray-900 sm:text-lg sm:leading-[1.75] lg:mb-6 lg:text-xl lg:leading-[1.75]">
-          Přidejte se k nám, vezměte polštáře a buďte součástí této jedinečné události!
-        </p>
-        <div class="flex flex-col items-start gap-x-4 gap-y-2.5 sm:flex-row">
-          <Button type="link" text="Kontaktujte nás" variant="primary" size="md" href="/kontakt" icon="love" />
-        </div>
-      </div>
-    </Container>
-  </section>
+  <AboutSection />
 </Layout>

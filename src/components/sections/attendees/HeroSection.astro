@@ -1,0 +1,12 @@
+---
+import image from '@images/ucastnici/hero.png';
+import { Image } from 'astro:assets';
+---
+
+<section
+  class="mx-auto flex flex-col items-center justify-between px-4 pb-16 pt-32 md:h-[calc(100vh-104px)] md:px-6 md:py-8 lg:h-[calc(100vh-136px)] lg:max-w-6xl lg:px-8"
+>
+  <h1 class="flex flex-grow items-center justify-center pb-16">
+    <Image class="w-full" src={image} alt="Zlín 20.4.2024 vstup zdarma" loading="eager" />
+  </h1>
+</section>

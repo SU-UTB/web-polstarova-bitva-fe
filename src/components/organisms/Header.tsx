@@ -1,8 +1,7 @@
+import { Button, Icon } from '@components/atoms';
 import { Menu, Transition } from '@headlessui/react';
+import polstare from '@images/logo.png';
 import React, { useEffect } from 'react';
-import polstare from '../../images/logo_rekordy_png.png';
-import { Button } from '../atoms/Button';
-import { Icon } from '../atoms/Icon';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);

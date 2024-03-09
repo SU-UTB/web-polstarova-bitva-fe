@@ -1,0 +1,32 @@
+---
+import { Container, H2 } from '@components/atoms';
+import Feather from '@images/feather.webp';
+import { Image } from 'astro:assets';
+---
+
+<section class="overflow-hidden bg-dark py-16 md:py-24 lg:py-32">
+  <Container>
+    <H2 color="primary" centered>Minulý ročník</H2>
+    <div class="relative mx-auto max-w-5xl shadow-2xl">
+      <div class="w-full overflow-hidden rounded-xl">
+        <iframe
+          class="mx-auto aspect-[3/2] w-full sm:aspect-[2/1]"
+          src="https://www.youtube.com/embed/5mqx7q2_YfA"
+          title="Polštářová bitva Zlín 2014"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <Image
+        src={Feather}
+        class="absolute -left-16 -top-8 h-16 w-fit blur-[1px] [transform:rotate(330deg)] md:-top-32 md:h-32 lg:-left-32 lg:-top-24"
+        alt=""
+      />
+      <Image
+        src={Feather}
+        class="absolute -right-12 bottom-0 h-16 w-fit blur-[1px] [transform:rotate(180deg)] md:-bottom-12 md:right-4 md:h-20 lg:-right-16 lg:h-32"
+        alt=""
+      />
+    </div>
+  </Container>
+</section>

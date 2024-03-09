@@ -1,10 +1,9 @@
 ---
-import Layout from '../components/Layout.astro';
-import { Button } from '../components/atoms/Button';
-import { Container } from '../components/atoms/Container';
+import Layout from '@components/Layout.astro';
+import { Button, Container } from '@components/atoms';
 
 const metaTags = {
-  title: 'Největší polštářová bitva v ČR  - Stránka nenalezena',
+  title: 'Stránka nenalezena | Největší polštářová bitva v ČR | Zlín 20.4.2024',
   description:
     'Připravte se na nekonečnou porci zábavy, vzrušení a adrenalinu, protože se chystáme zaznamenat nový rekord v počtu polštářových bojovníků na jednom místě. Tato událost je otevřena všem, bez ohledu na věk, pohlaví nebo zkušenosti.',
   image: '/meta-image-404.jpg',
@@ -12,14 +11,14 @@ const metaTags = {
 ---
 
 <Layout {...metaTags}>
-  <section class="py-16 md:py-24 lg:py-32 min-h-[60vh]">
+  <section class="min-h-[60vh] py-16 md:py-24 lg:py-32">
     <Container>
-      <div class="flex justify-center items-center">
+      <div class="flex items-center justify-center">
         <div class="text-center">
-          <h1 class="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-3 leading-snug text-gray-950">
+          <h1 class="mb-3 text-3xl font-bold leading-snug text-gray-950 sm:text-4xl md:text-5xl lg:text-6xl">
             Stránka nenalezena
           </h1>
-          <p class="sm:text-lg lg:text-xl sm:leading-[1.75] lg:leading-[1.75] font-medium text-gray-900 mb-4 lg:mb-6">
+          <p class="mb-4 font-medium text-gray-900 sm:text-lg sm:leading-[1.75] lg:mb-6 lg:text-xl lg:leading-[1.75]">
             Omlouváme se, ale vámi hledaná stránka nebyla nalezena.
           </p>
           <div class="flex justify-center">

@@ -1,176 +1,25 @@
 ---
-import { Image } from 'astro:assets';
-import Layout from '../components/Layout.astro';
-import { Button } from '../components/atoms/Button';
-import Bytkar1 from '../components/atoms/Characters/Bytkar1.astro';
-import Bytkar2 from '../components/atoms/Characters/Bytkar2.astro';
-import { Container } from '../components/atoms/Container';
-import HeroSection from '../components/sections/home/HeroSection.astro';
-import InfoSection from '../components/sections/home/InfoSection.astro';
-import Feather from '../images/feather.webp';
-import Polstare from '../images/polstare_s_logama.png';
+import Layout from '@components/Layout.astro';
+import AboutSection from '@components/sections/home/AboutSection.astro';
+import AttendeesInfoSection from '@components/sections/home/AttendeesInfoSection.astro';
+import HeroSection from '@components/sections/home/HeroSection.astro';
+import InfoSection from '@components/sections/home/InfoSection.astro';
+import LastEventSection from '@components/sections/home/LastEventSection.astro';
+import PartnerInfoSection from '@components/sections/home/PartnerInfoSection.astro';
 
 const metaTags = {
-  title: 'Největší polštářová bitva v ČR',
+  title: 'Největší polštářová bitva v ČR | Zlín 20.4.2024',
   description:
     'Připravte se na nekonečnou porci zábavy, vzrušení a adrenalinu, protože se chystáme zaznamenat nový rekord v počtu polštářových bojovníků na jednom místě. Tato událost je otevřena všem, bez ohledu na věk, pohlaví nebo zkušenosti.',
   image: '/meta-image.jpg',
 };
-
-const infoItems = [
-  { title: 'Kdy?', value: '20. 4. 2024' },
-  { title: 'V jakém městě?', value: 'Zlín' },
-  { title: 'A kde přesně?', value: 'Ještě upřesníme' },
-  { title: 'Jaký je ten rekord?', value: '780 lidí' },
-];
 ---
 
 <Layout {...metaTags}>
   <HeroSection />
-  <InfoSection items={infoItems} />
-  <section class="overflow-hidden py-16 md:py-24 lg:py-32">
-    <Container>
-      <div class="grid grid-cols-1 gap-y-12 md:grid-cols-3 xl:grid-cols-2">
-        <div class="md:col-span-2 md:pr-16 lg:pr-12 xl:col-span-1">
-          <h2
-            class="mb-4 text-3xl font-bold leading-snug text-gray-950 sm:text-4xl md:mb-6 md:text-5xl lg:mb-8 lg:text-6xl"
-          >
-            Co je to Největší polštářová bytva?
-          </h2>
-          <p class="mb-4 font-medium text-gray-900 sm:text-lg sm:leading-[1.75] lg:mb-6 lg:text-xl lg:leading-[1.75]">
-            Připravte se na nekonečnou porci zábavy, vzrušení a adrenalinu, protože se chystáme zaznamenat nový rekord v
-            počtu bojovníků s polštáři na jednom místě.
-          </p>
-          <p class="font-medium text-gray-900 sm:text-lg sm:leading-[1.75] lg:text-xl lg:leading-[1.75]">
-            Chceš zbít polštářem svého kámoše? Poměřit svoje síly s taťkou? Nebo si zablbnout s babičkou jak za mlada? K
-            tomu všemu ti dává možnost naše Polštářová bytva. Přijít může každý, kdo má srdce plné odvahy a chuť se
-            utkat v nejepičtějším boji, který Česká republika kdy viděla.
-          </p>
-        </div>
-        <div class="relative flex items-center justify-center lg:justify-end">
-          <div class="relative">
-            <Bytkar1 class="h-48 [transform:rotateY(180deg)] md:h-72 xl:h-96" />
-            <Image
-              src={Feather}
-              class="absolute -left-16 -top-8 h-16 w-fit blur-[1px] [transform:rotate(150deg)] md:-top-32 md:h-32 lg:-left-32 lg:-top-24"
-              alt=""
-              loading="lazy"
-            />
-            <Image
-              src={Feather}
-              class="absolute -right-12 bottom-0 h-16 w-fit blur-[1px] [transform:rotate(70deg)] md:-bottom-12 md:right-4 md:h-20 lg:-right-16 lg:h-32"
-              alt=""
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-    </Container>
-  </section>
-  <section class="overflow-hidden bg-gray-900/5 py-16 md:py-24 lg:py-32">
-    <Container>
-      <div class="grid grid-cols-1 gap-y-12 md:grid-cols-3 xl:grid-cols-2">
-        <div class="order-1 md:order-2 md:col-span-2 md:pl-16 lg:pl-12 xl:col-span-1">
-          <h2
-            class="mb-4 text-3xl font-bold leading-snug text-gray-950 sm:text-4xl md:mb-6 md:text-5xl lg:mb-8 lg:text-6xl"
-          >
-            Co všechno vás na naší bytvě čeká?
-          </h2>
-          <p class="mb-4 font-medium text-gray-900 sm:text-lg sm:leading-[1.75] lg:mb-6 lg:text-xl lg:leading-[1.75]">
-            Po každém vyčerpávajícím boji přichází hlad a žízeň, proto bude na místě konání i plno stánků, prostor k
-            odpočinku, ale i hudba, hry a další aktivity.
-          </p>
-          <p class="font-medium text-gray-900 sm:text-lg sm:leading-[1.75] lg:text-xl lg:leading-[1.75]">
-            Chystáme širokou škálu doprovodného programu, ve kterém si najdou svoje malí bojovníčci i velcí rváči.
-            Hlavní náplní bude spánek, který s tématem úzce souvisí a chceme přenést do povědomí problémy, které se na
-            něj vážou. Ale nebojte. Z naší bytvy mít noční můry určitě nebudete!
-          </p>
-        </div>
-        <div class="relative order-2 flex items-center justify-center md:order-1 lg:justify-start">
-          <div class="relative">
-            <Bytkar2 class="h-48 md:h-72 xl:h-96" />
-            <Image
-              src={Feather}
-              class="absolute -left-16 bottom-0 h-16 w-fit blur-[1px] [transform:rotate(250deg)] md:-bottom-12 md:left-4 md:h-20 lg:-left-24 lg:h-32"
-              alt=""
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-    </Container>
-  </section>
-  <section class="py-16 md:py-24 lg:py-32">
-    <Container>
-      <div class="grid grid-cols-1 gap-y-12 md:grid-cols-3 xl:grid-cols-2">
-        <div class="md:col-span-2 md:pr-16 lg:pr-12 xl:col-span-1">
-          <h2
-            class="mb-4 text-3xl font-bold leading-snug text-gray-950 sm:text-4xl md:mb-6 md:text-5xl lg:mb-8 lg:text-6xl"
-          >
-            Chceš aby se lidé bili ve tvém jméně ?
-          </h2>
-          <p class="mb-4 font-medium text-gray-900 sm:text-lg sm:leading-[1.75] lg:mb-6 lg:text-xl lg:leading-[1.75]">
-            Rozhodněte o tom, čí peří bude prolito v nelítostném polštářovém boji a přidejte se k nám jako partner.
-          </p>
-          <p class="mb-4 font-medium text-gray-900 sm:text-lg sm:leading-[1.75] lg:mb-6 lg:text-xl lg:leading-[1.75]">
-            Ozvěte se našim bytevním generálům, kteří se s vámi rádi spojí a do naší Největší polštářové bytvy vás
-            zapojí tak, aby to bylo přesně dle vašich představ. Pojďte do toho s námi a staňte se součástí
-            celorepublikového rekordu, o kterém budete vyprávět vnoučatům.
-          </p>
-          <div class="flex flex-col items-end gap-x-4 gap-y-2.5 sm:flex-row">
-            <Button type="link" text="Kontaktujte nás" variant="primary" size="md" href="/kontakt" icon="love" />
-            <Button type="link" text="Více informací" variant="gray" size="md" href="/partneri" />
-          </div>
-        </div>
-        <div class="flex items-center justify-center lg:justify-end">
-          <div class="relative">
-            <img src={Polstare.src} class="h-64 max-h-[32rem] md:h-96" alt="" />
-            <Image
-              src={Feather}
-              class="absolute -left-16 -top-8 h-16 w-fit blur-[1px] [transform:rotate(330deg)] md:-top-32 md:h-32 lg:-left-32 lg:-top-24"
-              alt=""
-              loading="lazy"
-            />
-            <Image
-              src={Feather}
-              class="absolute -right-12 bottom-0 h-16 w-fit blur-[1px] [transform:rotate(180deg)] md:-bottom-12 md:right-4 md:h-20 lg:-right-16 lg:h-32"
-              alt=""
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-    </Container>
-  </section>
-  <section class="overflow-hidden bg-dark py-16 md:py-24 lg:py-32">
-    <Container>
-      <h2
-        class="mb-4 text-center text-3xl font-bold leading-snug text-primary-600 sm:text-4xl md:mb-6 md:text-5xl lg:mb-8 lg:text-6xl"
-      >
-        Minulý ročník
-      </h2>
-      <div class="relative mx-auto max-w-5xl shadow-2xl">
-        <div class="w-full overflow-hidden rounded-xl">
-          <iframe
-            class="mx-auto aspect-[3/2] w-full sm:aspect-[2/1]"
-            src="https://www.youtube.com/embed/5mqx7q2_YfA"
-            title="Polštářová bitva Zlín 2014"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-        </div>
-
-        <Image
-          src={Feather}
-          class="absolute -left-16 -top-8 h-16 w-fit blur-[1px] [transform:rotate(330deg)] md:-top-32 md:h-32 lg:-left-32 lg:-top-24"
-          alt=""
-        />
-        <Image
-          src={Feather}
-          class="absolute -right-12 bottom-0 h-16 w-fit blur-[1px] [transform:rotate(180deg)] md:-bottom-12 md:right-4 md:h-20 lg:-right-16 lg:h-32"
-          alt=""
-        />
-      </div>
-    </Container>
-  </section>
+  <InfoSection />
+  <AboutSection />
+  <AttendeesInfoSection />
+  <PartnerInfoSection />
+  <LastEventSection />
 </Layout>

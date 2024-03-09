@@ -1,18 +1,18 @@
 ---
+import image from '@images/home/hero.png';
 import { Image } from 'astro:assets';
-import image from '../../../images/home/hero.png';
 ---
 
 <section
-  class="mx-auto flex flex-col items-center justify-between px-4 pb-16 pt-32 md:h-[calc(100vh-104px)] md:px-6 md:py-8 lg:h-[calc(100vh-136px)] lg:max-w-6xl lg:px-8"
+  class="mx-auto flex flex-col items-center justify-between px-4 pb-16 pt-32 md:min-h-[calc(100vh-104px)] md:px-6 md:py-8 lg:min-h-[calc(100vh-136px)] lg:max-w-6xl lg:px-8"
 >
-  <h1 class="flex flex-grow items-center justify-center pb-16">
+  <h1 class="flex flex-grow items-center justify-center">
     <Image class="w-full" src={image} alt="Největší polštářová bytva" loading="eager" />
   </h1>
   <a
     href="/#info"
     title="Více informací"
-    class="relative mx-auto block w-fit animate-[bounce_1000ms_infinite_3s] rounded-full bg-primary-600 p-3 text-primary-100 shadow-lg shadow-primary-600/20 transition duration-300 hover:text-white hover:shadow-xl hover:shadow-primary-600/30"
+    class="relative mx-auto mt-16 block w-fit animate-[bounce_1000ms_infinite_3s] rounded-full bg-primary-600 p-3 text-primary-100 shadow-lg shadow-primary-600/20 transition duration-300 hover:text-white hover:shadow-xl hover:shadow-primary-600/30"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

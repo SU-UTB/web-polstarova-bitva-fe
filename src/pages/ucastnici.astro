@@ -1,25 +1,19 @@
 ---
-import { Image } from 'astro:assets';
-import Layout from '../components/Layout.astro';
-import FaqSection from '../components/sections/attendees/FaqSection.astro';
-import RulesSection from '../components/sections/attendees/RulesSection.astro';
-import TimelineSection from '../components/sections/attendees/TimelineSection.astro';
-import image from '../images/ucastnici/hero.png';
+import Layout from '@components/Layout.astro';
+import FaqSection from '@components/sections/attendees/FaqSection.astro';
+import HeroSection from '@components/sections/attendees/HeroSection.astro';
+import RulesSection from '@components/sections/attendees/RulesSection.astro';
+import TimelineSection from '@components/sections/attendees/TimelineSection.astro';
 
 const metaTags = {
-  title: 'Největší polštářová bitva v ČR',
-  description: 'Největší polštářová bitva v České Republice, pořádaná v roce 2024',
+  title: 'Pro Bytkaře | Největší polštářová bitva v ČR | Zlín 20.4.2024 ',
+  description:
+    'Chceš zbít polštářem svého kámoše? Poměřit svoje síly s taťkou? Nebo si zablbnout s babičkou jak za mlada? K tomu všemu ti dává možnost naše Polštářová bytva. Přijít může každý, kdo má srdce plné odvahy a chuť se utkat v nejepičtějším boji, který Česká republika kdy viděla. ',
 };
 ---
 
 <Layout {...metaTags}>
-  <section
-    class="mx-auto flex flex-col items-center justify-between px-4 pb-16 pt-32 md:h-[calc(100vh-104px)] md:px-6 md:py-8 lg:h-[calc(100vh-136px)] lg:max-w-6xl lg:px-8"
-  >
-    <h1 class="flex flex-grow items-center justify-center pb-16">
-      <Image class="w-full" src={image} alt="Zlín 20.4.2024 vstup zdarma" loading="eager" />
-    </h1>
-  </section>
+  <HeroSection />
   <TimelineSection />
   <RulesSection />
   <FaqSection />
