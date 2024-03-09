@@ -18,7 +18,7 @@ export const Header = () => {
   return (
     <header className="py-5 sm:py-6 md:py-8 lg:py-10">
       <nav className="mx-auto flex items-center justify-between px-4 md:px-6 lg:max-w-7xl lg:px-8">
-        <a href="/" className="relative z-10 flex items-center gap-3 font-heading font-bold uppercase">
+        <a href="/" className="relative z-10 flex items-center gap-3 font-bold uppercase">
           <img src={polstare.src} className="md:-my4 -my-2.5 h-14 sm:-my-3 md:h-16 lg:h-20" alt="" />
           <span className="sr-only">SuRekordista</span>
         </a>

@@ -32,14 +32,3 @@ body {
   src: url('/fonts/Gilroy-Bold.ttf');
   font-weight: 700;
 }
-
-@font-face {
-  font-family: 'Neue-Regrade';
-  src: url('/fonts/Neue-Regrade-Variable.ttf');
-}
-
-@font-face {
-  font-family: 'Humane';
-  src: url('/fonts/Humane-Light.woff2');
-  font-weight: 300;
-}

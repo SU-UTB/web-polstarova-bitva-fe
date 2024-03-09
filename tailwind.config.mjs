@@ -7,8 +7,6 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Gilroy', 'Open Sans Variable', ...defaultTheme.fontFamily.sans],
-        heading: ['Neue-Regrade', 'Gilroy', 'Open Sans Variable', ...defaultTheme.fontFamily.sans],
-        humane: ['Humane', 'Gilroy', 'Open Sans Variable', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         dark: {
