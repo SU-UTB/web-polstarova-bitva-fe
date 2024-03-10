@@ -3,19 +3,22 @@
 
 name: Deploy to Firebase Hosting on PR
 on: pull_request
+permissions:
+  checks: write
+  contents: read
+  pull-requests: write
 jobs:
   build_and_preview:
-    name: 'Build web and deploy preview'
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         id: action-hosting-deploy
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SU_POLSTAROVA_BITVA }}'
           projectId: su-polstarova-bitva
     outputs:
       urls: ${{ steps.action-hosting-deploy.outputs.urls }}
@@ -25,7 +28,6 @@ jobs:
     needs: build_and_preview
     steps:
       - uses: actions/checkout@master
-      - run: mkdir -p ${{ github.workspace }}/tmp/artifacts
       - name: Lighthouse
         uses: foo-software/lighthouse-check-action@master
         id: lighthouseCheck
@@ -33,12 +35,6 @@ jobs:
           urls: ${{ fromJson(needs.build_and_preview.outputs.urls)[0] }}
           gitHubAccessToken: '${{ secrets.GITHUB_TOKEN }}'
           prCommentEnabled: true
-          outputDirectory: ${{ github.workspace }}/tmp/artifacts
-      - name: Upload lighthouse report
-        uses: actions/upload-artifact@master
-        with:
-          name: Lighthouse reports
-          path: ${{ github.workspace }}/tmp/artifacts
       - name: Verify Lighthouse Check results
         uses: foo-software/lighthouse-check-status-action@master
         with:
