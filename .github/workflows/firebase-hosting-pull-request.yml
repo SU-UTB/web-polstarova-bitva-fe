@@ -28,7 +28,6 @@ jobs:
     needs: build_and_preview
     steps:
       - uses: actions/checkout@master
-      - run: mkdir -p ${{ github.workspace }}/tmp/artifacts
       - name: Lighthouse
         uses: foo-software/lighthouse-check-action@master
         id: lighthouseCheck
@@ -36,12 +35,6 @@ jobs:
           urls: ${{ fromJson(needs.build_and_preview.outputs.urls)[0] }}
           gitHubAccessToken: '${{ secrets.GITHUB_TOKEN }}'
           prCommentEnabled: true
-          outputDirectory: ${{ github.workspace }}/tmp/artifacts
-      - name: Upload lighthouse report
-        uses: actions/upload-artifact@master
-        with:
-          name: Lighthouse reports
-          path: ${{ github.workspace }}/tmp/artifacts
       - name: Verify Lighthouse Check results
         uses: foo-software/lighthouse-check-status-action@master
         with:
