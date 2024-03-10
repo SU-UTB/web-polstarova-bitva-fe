@@ -1,14 +1,10 @@
 {
-  "hosting": [
-    {
-      "site": "su-test-polstarova-bitva",
-      "public": "dist",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
-    },
-    {
-      "site": "su-prod-polstarova-bitva",
-      "public": "dist",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
-    }
-  ]
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
 }
