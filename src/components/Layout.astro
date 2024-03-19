@@ -10,20 +10,18 @@ import '../styles/index.css';
 import Footer from './organisms/Footer.astro';
 import Head from './organisms/Head.astro';
 import { Header } from './organisms/Header';
+import Scripts from './organisms/Scripts.astro';
 ---
 
 <html lang="cs" class="">
   <Head {...Astro.props} />
   <body class="bg-gray">
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSPXPHPW"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
     <Header client:load />
     <main>
       <slot />
     </main>
-    <aside></aside>
+
     <Footer />
+    <Scripts />
   </body>
 </html>

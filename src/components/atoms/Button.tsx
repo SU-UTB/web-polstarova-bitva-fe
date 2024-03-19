@@ -5,6 +5,8 @@ type Props = { text: string; size: 'sm' | 'md' | 'lg'; variant: 'primary' | 'gra
   type: 'link';
   href: string;
   icon?: IconName;
+  rel?: string;
+  target?: string;
 };
 
 export const Button = (props: Props) => {
@@ -23,7 +25,7 @@ export const Button = (props: Props) => {
 
   if (props.type === 'link')
     return (
-      <a className={className} href={props.href}>
+      <a className={className} href={props.href} rel={props.rel} target={props.target}>
         <div className="absolute inset-0 rounded-xl transition duration-300 group-hover:bg-white/20"></div>
         <span className="relative">{props.text}</span>
         {props.icon && (

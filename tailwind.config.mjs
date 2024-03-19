@@ -52,6 +52,17 @@ export default {
           950: '#580025',
         },
       },
+      animation: {
+        'ping-sm': 'ping-sm 1s cubic-bezier(0, 0, 0.2, 1) infinite;',
+      },
+      keyframes: {
+        'ping-sm': {
+          '75%, 100%': {
+            transform: 'scale(1.2)',
+            opacity: 0,
+          },
+        },
+      },
     },
   },
   plugins: [require('@headlessui/tailwindcss')],
