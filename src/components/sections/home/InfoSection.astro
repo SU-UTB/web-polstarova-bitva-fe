@@ -1,29 +1,58 @@
 ---
+import { Icon } from '@components/atoms';
 import { Button } from '@components/atoms/Button';
-
-const infoItems = [
-  { title: 'Kdy?', value: '20. 4. 2024' },
-  { title: 'V jakém městě?', value: 'Zlín' },
-  { title: 'A kde přesně?', value: 'Ještě upřesníme' },
-  { title: 'Jaký je ten rekord?', value: '704 lidí' },
-];
 ---
 
 <section id="info" class="bg-dark px-4 py-12 shadow-xl shadow-dark/20 md:px-6 md:py-20 lg:px-8 lg:py-24">
   <h2 class="sr-only text-white">Informace o bitvě</h2>
   <div class="container mx-auto px-4">
-    <dl class="mx-auto grid w-fit grid-cols-1 gap-x-24 gap-y-10 sm:grid-cols-2 lg:w-full lg:grid-cols-4">
-      {
-        infoItems.map((item) => (
-          <div class="space-y-1 lg:space-y-3 lg:text-center">
-            <dt class="text-lg font-medium text-gray-300 lg:text-xl">{item.title}</dt>
-            <dd class="text-3xl font-bold tracking-wide text-pink-600 lg:text-4xl">{item.value}</dd>
-          </div>
-        ))
-      }
+    <dl class="mx-auto grid w-fit grid-cols-1 gap-x-16 gap-y-10 sm:grid-cols-2 lg:w-full lg:grid-cols-4">
+      <div class="space-y-1 lg:space-y-3 lg:text-center">
+        <dt class="text-lg font-medium text-gray-300 lg:text-xl">Kdy</dt>
+        <dd class="text-3xl font-bold tracking-wide text-pink-600 lg:text-4xl">20. 4. 2024</dd>
+      </div>
+      <div class="space-y-1 lg:space-y-3 lg:text-center">
+        <dt class="text-lg font-medium text-gray-300 lg:text-xl">V jakém městě?</dt>
+        <dd class="text-3xl font-bold tracking-wide text-pink-600 lg:text-4xl">Zlín</dd>
+      </div>
+      <div class="space-y-1 lg:space-y-3 lg:text-center">
+        <dt class="text-lg font-medium text-gray-300 lg:text-xl">A kde přesně</dt>
+        <dd
+          class="text-3xl font-bold tracking-wide text-pink-600 transition duration-300 hover:text-pink-500 lg:text-4xl"
+        >
+          <a
+            class="hidden flex-col items-center justify-center gap-1 xl:flex"
+            href="https://maps.app.goo.gl/PnqmFg12kbdnV4L97"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="flex items-center justify-center gap-3 lg:items-start xl:items-center">
+              <span class="whitespace-nowrap">Platforma 14|15</span>
+              <span><Icon name="external-link" className="h-6" /></span>
+            </div>
+            <span class="text-base font-medium">Baťův institut</span>
+          </a>
+          <a
+            class="flex flex-col items-start gap-1 lg:items-center xl:hidden"
+            href="geo:49.22514738327181,17.658961717923923"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="flex items-center justify-center gap-3 lg:items-start xl:items-center">
+              <span class="whitespace-nowrap">Platforma 14|15</span>
+              <span><Icon name="external-link" className="h-6" /></span>
+            </div>
+            <span class="text-sm font-medium">Baťův institut</span>
+          </a>
+        </dd>
+      </div>
+      <div class="space-y-1 lg:space-y-3 lg:text-center">
+        <dt class="text-lg font-medium text-gray-300 lg:text-xl">Jaký je ten rekord?</dt>
+        <dd class="text-3xl font-bold tracking-wide text-pink-600 lg:text-4xl">704 lidí</dd>
+      </div>
     </dl>
   </div>
-  <div class="-mb-12 mt-12 flex justify-center">
+  <div class="mt-12 flex justify-center md:-mb-12">
     <div class="relative">
       <div class="relative z-10">
         <Button

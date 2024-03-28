@@ -3,6 +3,7 @@ export type Props = {
   className?: string;
 };
 
+// https://heroicons.com/
 export type IconName =
   | 'facebook'
   | 'instagram'
@@ -13,7 +14,8 @@ export type IconName =
   | 'slash'
   | 'menu'
   | 'close'
-  | 'love';
+  | 'love'
+  | 'external-link';
 
 export const Icon = ({ name, className }: Props) => {
   if (name === 'facebook')
@@ -127,6 +129,24 @@ export const Icon = ({ name, className }: Props) => {
         className={className}
       >
         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    );
+
+  if (name === 'external-link')
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={3}
+        stroke="currentColor"
+        className={className}
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+        />
       </svg>
     );
 };
