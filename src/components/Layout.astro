@@ -7,9 +7,9 @@ interface Props {
 
 import '@fontsource-variable/open-sans';
 import '../styles/index.css';
+import { Header } from './organisms';
 import Footer from './organisms/Footer.astro';
 import Head from './organisms/Head.astro';
-import { Header } from './organisms/Header';
 import Scripts from './organisms/Scripts.astro';
 ---
 
@@ -20,7 +20,6 @@ import Scripts from './organisms/Scripts.astro';
     <main>
       <slot />
     </main>
-
     <Footer />
     <Scripts />
   </body>
