@@ -1,18 +1,48 @@
 ---
 import Layout from '@components/Layout.astro';
+import { Container, H2 } from '@components/atoms';
 import AboutSection from '@components/sections/partners/AboutSection.astro';
 import IntroSection from '@components/sections/partners/IntroSection.astro';
-import { PricingSection } from '@components/sections/partners/PricingSection';
+import { Image } from 'astro:assets';
+import Loznice21Image from '../images/partneri/loznice-21.png';
+import PicasoImage from '../images/partneri/picaso.png';
+import RolsitImage from '../images/partneri/rolsit.png';
 
 const metaTags = {
   title: 'Partneři | Největší polštářová bitva v ČR | Zlín 20.4.2024',
   description:
     ' Staňte se naším partnerem. Vráťte se společně s námi do dětství a překonejme národní rekord! Rádi přizpůsobíme koncept a formu spolupráce vašim potřebám prostřednictvím individuální nabídky. ',
 };
+
+const partners = [
+  { image: PicasoImage, alt: 'Picaso manufactory' },
+  { image: RolsitImage, alt: 'Rolsit' },
+];
 ---
 
 <Layout {...metaTags}>
   <IntroSection />
-  <PricingSection client:load />
+
+  <section class="py-16 text-center md:py-24 lg:py-32">
+    <Container>
+      <H2>Generální partner</H2>
+      <Image src={Loznice21Image} alt="Ložnice 21" class="mx-auto mt-12 h-24 object-contain" />
+      <h3
+        class="mb-4 mt-24 text-2xl font-bold leading-snug text-gray-900 sm:text-3xl md:mb-6 md:text-4xl lg:mb-8 lg:text-5xl"
+      >
+        Partneři
+      </h3>
+      <ul class="flex flex-wrap justify-center gap-12">
+        {
+          partners.map((partner) => (
+            <li class="w-fit">
+              <Image src={partner.image} alt={partner.alt} class="mt-12 h-20 w-fit object-contain" />
+            </li>
+          ))
+        }
+      </ul>
+    </Container>
+  </section>
+
   <AboutSection />
 </Layout>
