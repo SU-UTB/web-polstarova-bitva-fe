@@ -1,18 +1,76 @@
 ---
 import Layout from '@components/Layout.astro';
+import { Container, H2 } from '@components/atoms';
 import AboutSection from '@components/sections/partners/AboutSection.astro';
 import IntroSection from '@components/sections/partners/IntroSection.astro';
-import { PricingSection } from '@components/sections/partners/PricingSection';
+import { Image } from 'astro:assets';
+import JurasImage from '../images/partneri/advokatni-kancelar-juras.png';
+import BumerangeImage from '../images/partneri/bumerang.png';
+import DarreImage from '../images/partneri/darre.png';
+import ExplicitImage from '../images/partneri/explicit.png';
+import FogImage from '../images/partneri/fog.png';
+import InformujiImage from '../images/partneri/informuji.png';
+import KntbImage from '../images/partneri/kntb.png';
+import KudyznudyImage from '../images/partneri/kudyznudy.png';
+import Loznice21Image from '../images/partneri/loznice-21.png';
+import LusteninyImage from '../images/partneri/lusteniny.png';
+import NestleImage from '../images/partneri/nestle.png';
+import PanOldaImage from '../images/partneri/pan-olda.png';
+import PicasoImage from '../images/partneri/picaso.png';
+import UtbImage from '../images/partneri/utb.png';
+import ZlinFilmFestImage from '../images/partneri/zlin-film-fest.png';
 
 const metaTags = {
   title: 'Partneři | Největší polštářová bitva v ČR | Zlín 20.4.2024',
   description:
     ' Staňte se naším partnerem. Vráťte se společně s námi do dětství a překonejme národní rekord! Rádi přizpůsobíme koncept a formu spolupráce vašim potřebám prostřednictvím individuální nabídky. ',
 };
+
+const partners = [
+  { image: PicasoImage, alt: 'Picaso manufactory', link: 'https://www.loznice21.cz/' },
+  { image: NestleImage, alt: 'Nestlé', link: 'https://www.nestle.cz/cs' },
+  { image: JurasImage, alt: 'Advokátní kancelář Juráš', link: 'https://www.jurasapartneri.cz/' },
+  { image: BumerangeImage, alt: 'Bumerang Film', link: 'https://bumerang.film/' },
+  { image: FogImage, alt: 'Fog Hookah', link: 'https://www.facebook.com/FOGZlin/' },
+  { image: DarreImage, alt: 'Darré', link: 'https://www.darre.cz/' },
+  { image: ExplicitImage, alt: 'Explicit', link: 'https://www.explicitreality.cz/' },
+  { image: LusteninyImage, alt: 'Luštěniny', link: 'https://lusteniny.eu' },
+  { image: KntbImage, alt: 'Krajská nemocnice Tomáše Bati', link: 'https://www.kntb.cz/' },
+  { image: UtbImage, alt: 'Univerzita Tomáše bati', link: 'https://utb.cz' },
+  { image: PanOldaImage, alt: 'Pan Olda', link: 'https://www.instagram.com/panoldaofficial/' },
+  { image: InformujiImage, alt: 'Informuji', link: 'https://informuji.cz' },
+  { image: KudyznudyImage, alt: 'Kudy z nudy', link: 'https://kudyznudy.cz' },
+  { image: ZlinFilmFestImage, alt: 'Zlín film festival', link: 'https://www.zlinfest.cz/' },
+];
 ---
 
 <Layout {...metaTags}>
   <IntroSection />
-  <PricingSection client:load />
+
+  <section class="px-2 py-16 text-center md:py-24 lg:py-32">
+    <Container>
+      <H2>Generální partner</H2>
+      <a href="https://www.loznice21.cz" title="Ložnice 21" target="_blank" rel="noopener noreferrer external">
+        <Image src={Loznice21Image} alt="Ložnice 21" class="mx-auto mt-16 h-24 object-contain" />
+      </a>
+      <h3
+        class="mb-8 mt-24 text-2xl font-bold leading-snug text-gray-900 sm:text-3xl md:mb-6 md:text-4xl lg:mb-14 lg:text-5xl"
+      >
+        Partneři
+      </h3>
+      <ul class="mx-auto flex max-w-5xl flex-wrap justify-center gap-12">
+        {
+          partners.map((partner) => (
+            <li class="w-fit">
+              <a href={partner.link} title={partner.alt} target="_blank" rel="noopener noreferrer external">
+                <Image src={partner.image} alt={partner.alt} class="h-8 w-fit object-contain sm:h-10 md:h-12 lg:h-16" />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </Container>
+  </section>
+
   <AboutSection />
 </Layout>
